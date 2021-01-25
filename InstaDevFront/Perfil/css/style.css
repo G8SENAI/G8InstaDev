@@ -16,7 +16,8 @@ body {
     height: 45px;
     border: 1px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
 }
 
 .content {
@@ -36,6 +37,7 @@ body {
 .logo { 
     /* padding-left: 15px; */
     padding-top: 8px;
+    
 }
 
 #divBusca {
@@ -74,6 +76,7 @@ select:focus {
 
 .logos {
     justify-content: space-between;
+
 }
 
 .logoss {
