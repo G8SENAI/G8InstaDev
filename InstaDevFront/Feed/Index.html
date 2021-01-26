@@ -102,63 +102,50 @@
     <section class="postAdicionado flex-bt-center content">
         <div class="card">
             <div class="perfil">
-                <img src="imgs/postAdicionado/gabigordo 2.png" alt="foto de perfil do usuario">
-                <img src="imgs/postAdicionado/gabigordo.png" alt="nome do usuario" class="subindoo">
-                <br>
-                <img src="imgs/postAdicionado/Flamengo, RJ.png" alt="local onde o usuario postou a foto" class="localizacao">
+                <img class="foto-perfil" src="imgs/postAdicionado/gabigordo 2.png" alt="Foto de perfil do usuário">
+                <p class="texto-comentario flutuando"><b>gabigordo</b>
+                <BR>
+                    Flamengo, RJ</p>
             </div>
             <img src="imgs/postAdicionado/post-gabigordo 1.png" alt="post feito pelo usuario">
             <div class="icones">
-                <img src="imgs/postAdicionado/Vector.png" alt="icone curtida">
+                <img id="imagem_curtida" src="" onclick="curtiu()" alt="icone curtida">
                 <img src="imgs/postAdicionado/Vector (1).png" alt="icone comentario" class="comentario">
                 <input type="text" placeholder="Comentar..." class="comentario">
             </div>
-            <img src="imgs/postAdicionado/2077 curtidas.png" alt="curtidas" class="curtidas">
-            <div class="comentario-adicionado">
-                <img src="imgs/postAdicionado/gabigordo.png" alt="usuario">
-                <img src="imgs/postAdicionado/flaamengo.png" alt="flamengo">
-                <img src="imgs/postAdicionado/Amo vocês mil milhões _3.png" alt="amo voces mil milhoes">
+            <div class="texto-comentario" id="div_mens">2077</div>
+                <div class="comentario-adicionado">
+                <p class="texto-comentario"><b>gabigordo</b> <span class="fla">#flamengo</span> <span>Amo vocês mil milhões</p>
             </div>
             <div class="comentario-adicionado-dois">
-                <img src="imgs/postAdicionado/yes_baby.png" alt="usuario">
-                <img src="imgs/postAdicionado/thank you.png" alt="comentario">
-            </div>
+                <p class="texto-comentario"><b>yes_baby</b><span> Thank you</p>
+                </div>
             <div class="comentario-adicionado-tres">
-                <img src="imgs/postAdicionado/king_pele.png" alt="usuario">
-                <img src="imgs/postAdicionado/Esses são bons de bola, entende_.png" alt="comentario" class="comentarioPele">
+                <p class="texto-comentario"><b>king_pele</b><span> Esses são bons de bola, entende?</p>
             </div>
         </div>
     </section>
-    <section class="postAdicionado flex-bt-center content">
-        <div class="card">
-            <div class="perfil">
-                <img src="imgs/postAdicionado/gabigordo 2.png" alt="foto de perfil do usuario">
-                <img src="imgs/postAdicionado/gabigordo.png" alt="nome do usuario" class="subindoo">
-                <br>
-                <img src="imgs/postAdicionado/Flamengo, RJ.png" alt="local onde o usuario postou a foto" class="localizacao">
-            </div>
-            <img src="imgs/postAdicionado/post-gabigordo 1.png" alt="post feito pelo usuario">
-            <div class="icones">
-                <img src="imgs/postAdicionado/Vector.png" alt="icone curtida">
-                <img src="imgs/postAdicionado/Vector (1).png" alt="icone comentario" class="comentario">
-                <input type="text" placeholder="Comentar..." class="comentario">
-            </div>
-            <img src="imgs/postAdicionado/2077 curtidas.png" alt="curtidas" class="curtidas">
-            <div class="comentario-adicionado">
-                <img src="imgs/postAdicionado/gabigordo.png" alt="usuario">
-                <img src="imgs/postAdicionado/flaamengo.png" alt="flamengo">
-                <img src="imgs/postAdicionado/Amo vocês mil milhões _3.png" alt="amo voces mil milhoes">
-            </div>
-            <div class="comentario-adicionado-dois">
-                <img src="imgs/postAdicionado/yes_baby.png" alt="usuario">
-                <img src="imgs/postAdicionado/thank you.png" alt="comentario">
-            </div>
-            <div class="comentario-adicionado-tres">
-                <img src="imgs/postAdicionado/king_pele.png" alt="usuario">
-                <img src="imgs/postAdicionado/Esses são bons de bola, entende_.png" alt="comentario" class="comentarioPele">
-            </div>
-        </div>
-    </section>
+    
 </body>
 
 </html>
+
+<script>
+    
+    var curtidas = 2077;
+    imagem_curtida.src = "imgs/postAdicionado/Vector.png";
+
+    function curtiu() {
+        curtidas ++;
+        div_mens.innerHTML = `${curtidas}`;
+        if (curtidas % 2 == 0) {
+            imagem_curtida.src = "imgs/postAdicionado/coracaopintado.png"
+            div_mens.innerHTML = `${2078}`
+        } else {
+            imagem_curtida.src = "imgs/postAdicionado/Vector.png"
+            div_mens.innerHTML = `${2077}`
+        }
+    }
+
+
+</script>
