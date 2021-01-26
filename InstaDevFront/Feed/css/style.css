@@ -195,25 +195,23 @@ select:focus {
 }
 
 .perfil {
-    margin: 16px 0px 0 27px;
+    margin: 16px 0px 0 13px;
 }
 
-.localizacao {
-    margin-left: 39px;
+.flutuando{
+    float: left;
+    padding-left: 52px;
 }
 
-.subindoo {
+.flutuar{
+    padding-right: 20px;
+}
+
+.foto-perfil{
     position: absolute;
-    bottom: 138px;
-    right: 70%;
+    left: 23%;
+    bottom: 27%;
 }
-
-.localizacao {
-    position: absolute;
-    bottom: 121px;
-    right: 69%;
-}
-
 .icones,
 .comentario {
     padding-left: 20px;
@@ -224,20 +222,15 @@ select:focus {
     color: rgba(175, 175, 175, 1);
 }
 
-.curtidas,
-.comentario-adicionado,
-.comentario-adicionado-dois,
-.comentario-adicionado-tres {
-    margin-left: 22px;
-    margin-top: 5px;
+.texto-comentario{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
 }
 
-.comentario-adicionado,
-.comentario-adicionado-dois,
-.comentario-adicionado-tres {
-    margin-top: 6px;
+.fla{
+    color: #2686CC;
 }
 
-.comentarioPele {
-    margin-bottom: 2px;
+#div_mens{
+    padding-left: 18px;
 }
