@@ -20,6 +20,8 @@ namespace G8InstaDev.Controllers
 
         public IActionResult Index()
         {
+            Feed feedModel = new Feed();
+            ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
 

@@ -1,36 +1,35 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - G8InstaDev</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <a asp-area="Cadastro de feed" asp-controller="Feed" asp-action="Index">Post</a>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">G8InstaDev</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                        </li>
-                    </ul>
+      <header class="topo">
+        <div class=" content flex-bt-center">
+            <div class="menu">
+                <div class="logo">
+                    <img src="./imgs/Instadev.png">
+                </div>
+
+                <div id="divBusca">
+                    <a href="../Perfil/Index.html"><img src="imgs/Vector.png" alt="Pesquisar" /></a>
+                    <input type="text" id="txtBusca" placeholder="Pesquisar" />
+                </div>
+                <div class="logos">
+                    <img src="imgs/home.png" alt="home" class="logoss">
+                    <img src="imgs/plane 1.png" alt="Plano" class="logoss">
+                    <img src="imgs/compass 1.png" alt="Compasso" class="logoss">
+                    <img src="imgs/coraçao.png" alt="Curtidas" class="logoss">
+                    <a href="../Perfil/Index.html"><img src="imgs/thank-you 1.png" alt="Foto do usuário" class="logoss"></a>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
