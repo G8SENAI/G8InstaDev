@@ -36,3 +36,12 @@ C:\Users\Pichau\OneDrive\Desktop\Nova pasta\G8InstaDev\obj\Debug\netcoreapp3.1\G
 C:\Users\Pichau\OneDrive\Desktop\Nova pasta\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\Pichau\OneDrive\Desktop\Nova pasta\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\Pichau\OneDrive\Desktop\Nova pasta\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csprojAssemblyReference.cache
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfoInputs.cache
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfo.cs
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CoreCompileInputs.cache
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cache
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cs
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.dll
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
