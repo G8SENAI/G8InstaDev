@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Feed";
+}
+
+<h1>Teste feed</h1>
+
+<form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+
+    <label>Legenda</label>
+    <input type="text" name="Texto" />
+
+    <label>Imagem</label>
+    <input type="file" name="Imagem" />
+
+
+    <button class="gradient btn" type="submit"> Cadastrar </button>
+</form>
+
+<table class="table table-striped table-responsive">
+    <thead>
+        <th>ID publicacao</th>
+        <th>legenda</th>
+        <th>Foto</th>
+        <th>id usuario</th>
+        <td>likes</td>
+    </thead>
+    <tbody>
+        @foreach (Feed feed in ViewBag.Feeds)
+        {
+            <tr>
+                <td>@feed.IdPublicacao</td>
+                <td>@feed.Legenda</td>
+                <td><img src="/img/Feed/@feed.Imagem" alt="Imagem da equipe @feed.Legenda" width="250"></td>
+                <td>@feed.Likes</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
