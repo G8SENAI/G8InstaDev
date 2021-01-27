@@ -2,6 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
+@* <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/site.js"> *@
+<link rel="stylesheet" href="../Feed/css/style.css">
+
+
+
 <section class="storys content flex-bt-center">
     <div class="barra">
         <div class="fotoUM">
@@ -83,28 +89,29 @@
 {
     <section class="postAdicionado flex-bt-center content">
         <div class="card">
-
             <div class="perfil">
                 <img class="foto-perfil" src="imgs/postAdicionado/gabigordo 2.png" alt="Foto de perfil do usuário">
                 <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="700">
 
                 <div class="icones">
-                    <img id="imagem_curtida" src="" onclick="curtiu()" alt="Icone curtida">
+                    <img id="imagem_curtida" src="imgs/postAdicionado/Vector.png" onclick="curtiu()" alt="icone curtida">
                     <img src="imgs/postAdicionado/Vector (1).png" alt="icone comentario" class="comentario">
                     <input type="text" placeholder="Comentar..." class="comentario">
                 </div>
+                <div class="texto-comentario" id="div_mens">2077</div>
 
                 <p class="texto-comentario flutuando"><b>@feed.Legenda</b></p>
             </div>
+        </div>
     </section>
 }
-   
-    <script>
+
+<script>   
     var curtidas = 2077;
     imagem_curtida.src = "imgs/postAdicionado/Vector.png";
 
     function curtiu() {
-        curtidas++;
+        curtidas ++;
         div_mens.innerHTML = `${curtidas}`;
         if (curtidas % 2 == 0) {
             imagem_curtida.src = "imgs/postAdicionado/coracaopintado.png"
@@ -114,4 +121,5 @@
             div_mens.innerHTML = `${2077}`
         }
     }
+
 </script>
