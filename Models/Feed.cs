@@ -11,8 +11,6 @@ namespace G8InstaDev.Models
         
         public int IdUsuario { get; set; }
         
-        public int Likes { get; set; }
-        
         private const string PATH = "Database/Feed";
 
         public Feed()
@@ -21,7 +19,7 @@ namespace G8InstaDev.Models
         }
 
         public string Prepare(Feed f){
-            return $"{f.IdPublicacao};{f.IdUsuario};{f.Imagem};{f.Legenda};{f.Likes}";
+            return $"{f.IdPublicacao};{f.IdUsuario};{f.Imagem};{f.Legenda}";
         }
         
         public int idPublicacao()
@@ -75,14 +73,13 @@ namespace G8InstaDev.Models
 
             foreach (var item in linhas)
             {
-                string[ ]linha = item.Split(";");
+                string[]linha = item.Split(";");
 
                 Feed feed = new Feed();
                 feed.IdPublicacao = int.Parse(linha[0]);
-                feed.Imagem = linha[1];
-                feed.Legenda = linha[2];
-                feed.IdUsuario = int.Parse(linha[3]);
-                feed.Likes = int.Parse(linha[4]);
+                feed.IdUsuario = int.Parse(linha[1]);
+                feed.Imagem = linha[2];
+                feed.Legenda = linha[3];
 
                 feeds.Add(feed);
             }

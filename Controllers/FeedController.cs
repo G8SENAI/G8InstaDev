@@ -53,7 +53,6 @@ namespace G8InstaDev.Controllers
 
             novoFeed.Legenda = form["Legenda"];
             novoFeed.IdUsuario = feedModel.idUsuario();
-            novoFeed.Likes = Int32.Parse(form["Likes"]);
 
             feedModel.Create(novoFeed);
             ViewBag.Noticias = feedModel.ReadAll();
