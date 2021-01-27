@@ -11,7 +11,7 @@ namespace G8InstaDev.Models
         
         public int IdUsuario { get; set; }
         
-        private const string PATH = "Database/Feed";
+        private const string PATH = "Database/Feed.csv";
 
         public Feed()
         {

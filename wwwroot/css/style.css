@@ -195,7 +195,7 @@ select:focus {
 }
 
 .perfil {
-    margin: 16px 0px 0 13px;
+    margin: 16px 0px 0 0px;
 }
 
 .flutuando {
@@ -207,11 +207,13 @@ select:focus {
     padding-right: 20px;
 }
 
+
+/* 
 .foto-perfil {
     position: absolute;
     left: 23%;
     bottom: 27%;
-}
+} */
 
 .icones,
 .comentario {
