@@ -122,6 +122,10 @@ select:focus {
     height: 166px;
 }
 
+#imagem-curtida {
+    width: 40px;
+}
+
 .imagem-postar {
     padding: 17px 0px 0 25px;
 }

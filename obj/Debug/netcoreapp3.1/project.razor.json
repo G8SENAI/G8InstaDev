@@ -14397,11 +14397,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\olive\\Desktop\\G8InstaDev\\Views\\Feed\\Index.cshtml",
-      "TargetPath": "Views\\Feed\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\olive\\Desktop\\G8InstaDev\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
