@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .boxprincipal{
     position: absolute;
     width: 342px;
@@ -23,6 +25,7 @@
     height: 38px;
     left: 63px;
     top: 60px;
+    font-size:'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -48,6 +51,7 @@
     left: 10px;
     bottom: -5px;
     color: #afafafe3;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -71,6 +75,7 @@
     left: 10px;
     top: -5px;
     color: #afafafe3;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -94,6 +99,7 @@
     left: 10px;
     top: -5px;
     color: #afafafe3;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -117,6 +123,7 @@
     left: 10px;
     top: -5px;
     color: #afafafe3;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -138,6 +145,7 @@
     height: 32px;
     left: 46px;
     top: 379px;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -161,6 +169,7 @@
     height: 16px;
     left: 85px;
     top: 20px;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -179,6 +188,7 @@
     width: 113px;
     height: 16px;
     left: 115px;
+    font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;

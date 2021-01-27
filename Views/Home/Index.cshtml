@@ -2,7 +2,124 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@* <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/site.js"> *@
+<link rel="stylesheet" href="../Feed/css/style.css">
+
+
+
+<section class="storys content flex-bt-center">
+    <div class="barra">
+        <div class="fotoUM">
+            <img src="imgs/storys/vin-diesel 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/vin_diesel.png" alt="Nome do usuario" class="espacamento">
+        </div>
+
+        <div class="fotoDOIS">
+            <img src="imgs/storys/gabigordo 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/gabigordo.png" alt="Nome do usuario" class="espacamento">
+        </div>
+
+        <div class="fotoTRES">
+            <img src="imgs/storys/will-baiano 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/will_baiano.png" alt="Nome do usuario" class="espacamento">
+        </div>
+
+        <div class="fotoQUATRO">
+            <img src="imgs/storys/tony_stark 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/adriano_stark.png" alt="Nome do usuario" class="espacamento">
+        </div>
+
+        <div class="fotoCINCO">
+            <img src="imgs/storys/pele 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/king_pele.png" alt="Nome do usuario" class="espacamento">
+        </div>
+
+        <div class="fotoSEIS">
+            <img src="imgs/storys/samuel-rosa-bebê 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/samuel_rosa.png" alt="Nome do usuario" class="espacamento">
+        </div>
+
+        <div class="fotoSETE">
+            <img src="imgs/storys/chaves_metal 1.png" alt="foto do usuário" class="foto-story">
+            <br>
+            <img src="imgs/storys/chaves_metal.png" alt="Nome do usuario" class="espacamento">
+        </div>
+    </div>
+</section>
+
+<div class="fotoUSUARIO">
+    <a href="../Perfil/Index.html"><img src="imgs/storys/thank-you 2.png" alt="foto de perfil do usuario logado"
+            class="descida"></a>
+
+    <img src="imgs/storys/yes_baby.png" alt="nome do usuario" class="sobe">
+    <br>
+    <img src="imgs/storys/Marcos Jeeves.png" alt="nome original do usuario" class="espacao">
 </div>
+
+<section class="postar flex-bt-center content">
+    <div class="retangulo">
+        <div class="imagem-postar">
+            <img src="imgs/Postar/thank-you 3.png" alt="foto de perfil do usuario">
+            <img src="imgs/Postar/Postar.png" alt="texto Postar" class="espaco">
+        </div>
+
+
+        <form method="POST" class="post" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+
+            <label>Legenda</label>
+            <input type="text" name="Legenda" />
+
+            <label>Imagem</label>
+            <input type="file" name="Imagem" />
+
+
+            <button class="gradient btn" type="submit"> Cadastrar </button>
+        </form>
+
+</section>
+
+@foreach (Feed feed in ViewBag.Feeds)
+{
+    <section class="postAdicionado flex-bt-center content">
+        <div class="card">
+            <div class="perfil">
+                <img class="foto-perfil" src="imgs/postAdicionado/gabigordo 2.png" alt="Foto de perfil do usuário">
+                <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="700">
+
+                <div class="icones">
+                    <img id="imagem_curtida" src="imgs/postAdicionado/Vector.png" onclick="curtiu()" alt="icone curtida">
+                    <img src="imgs/postAdicionado/Vector (1).png" alt="icone comentario" class="comentario">
+                    <input type="text" placeholder="Comentar..." class="comentario">
+                </div>
+                <div class="texto-comentario" id="div_mens">2077</div>
+
+                <p class="texto-comentario flutuando"><b>@feed.Legenda</b></p>
+            </div>
+        </div>
+    </section>
+}
+
+<script>   
+    var curtidas = 2077;
+    imagem_curtida.src = "imgs/postAdicionado/Vector.png";
+
+    function curtiu() {
+        curtidas ++;
+        div_mens.innerHTML = `${curtidas}`;
+        if (curtidas % 2 == 0) {
+            imagem_curtida.src = "imgs/postAdicionado/coracaopintado.png"
+            div_mens.innerHTML = `${2078}`
+        } else {
+            imagem_curtida.src = "imgs/postAdicionado/Vector.png"
+            div_mens.innerHTML = `${2077}`
+        }
+    }
+
+</script>
