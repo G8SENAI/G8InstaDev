@@ -72,4 +72,3 @@ C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8Inst
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.xml
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
-C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Feed\Index.cshtml.g.cs
