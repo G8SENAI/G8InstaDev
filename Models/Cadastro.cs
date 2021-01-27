@@ -15,6 +15,26 @@ namespace G8InstaDev.Models
         private const string PATH = "Database/Cadastro.csv";
 
         Cadastro usuario = new Cadastro();
+
+        public void Create(Cadastro c)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Cadastro> ReadAll()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(Cadastro c)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 
 }
