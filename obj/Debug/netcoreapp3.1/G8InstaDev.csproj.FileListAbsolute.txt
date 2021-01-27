@@ -72,3 +72,12 @@ C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8Inst
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.xml
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csprojAssemblyReference.cache
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfoInputs.cache
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfo.cs
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CoreCompileInputs.cache
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cache
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cs
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.dll
+C:\Users\Maria\Desktop\projeto1\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
