@@ -224,3 +224,5 @@ C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8Inst
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Cadastro\Index.cshtml.g.cs
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
