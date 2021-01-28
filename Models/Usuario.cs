@@ -15,7 +15,7 @@ namespace G8InstaDev.Models
         public DateTime DataNascimento { get; set; }
         public string Foto { get; set; }
         
-        private const string PATH = "Database/Cadastro.csv";
+        private const string PATH = "Database/Usuario.csv";
 
         Usuario usuario = new Usuario();
 
