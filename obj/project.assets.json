@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\tolen\\.nuget\\packages\\": {},
-    "E:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\FIC\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj",
+      "projectUniqueName": "C:\\Users\\FIC\\Desktop\\InstaDev G8 Tarde\\G8InstaDev\\G8InstaDev.csproj",
       "projectName": "G8InstaDev",
-      "projectPath": "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj",
-      "packagesPath": "C:\\Users\\tolen\\.nuget\\packages\\",
-      "outputPath": "C:\\SENAI\\repositorio\\G8InstaDev\\obj\\",
+      "projectPath": "C:\\Users\\FIC\\Desktop\\InstaDev G8 Tarde\\G8InstaDev\\G8InstaDev.csproj",
+      "packagesPath": "C:\\Users\\FIC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FIC\\Desktop\\InstaDev G8 Tarde\\G8InstaDev\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tolen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

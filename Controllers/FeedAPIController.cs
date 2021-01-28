@@ -8,16 +8,16 @@ namespace G8InstaDev.Controllers
     public class FeedAPIController
     {
         [HttpGet]
-        public List<Feed> listar()
+        public List<Publicacao> listar()
         {
-            Feed feed = new Feed();
+            Publicacao feed = new Publicacao();
             return feed.ReadAll();
         }
 
         [HttpPost]
-        public bool Gravar(Feed f)
+        public bool Gravar(Publicacao f)
         {
-            Feed feed = new Feed();
+            Publicacao feed = new Publicacao();
             feed.Create(f);
             return true;
         }
