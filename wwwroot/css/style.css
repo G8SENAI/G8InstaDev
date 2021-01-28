@@ -24,6 +24,10 @@ body {
     margin: auto;
 }
 
+.feijao {
+    padding: 0 0 0 0;
+}
+
 .flex-bt-center {
     display: flex;
     justify-content: space-between;
