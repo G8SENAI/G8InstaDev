@@ -23,6 +23,7 @@ namespace G8InstaDev.Controllers
         Feed feedModel = new Feed();
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("-UserName");
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
