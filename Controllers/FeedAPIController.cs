@@ -13,5 +13,13 @@ namespace G8InstaDev.Controllers
             Feed feed = new Feed();
             return feed.ReadAll();
         }
+
+        [HttpPost]
+        public bool Gravar(Feed f)
+        {
+            Feed feed = new Feed();
+            feed.Create(f);
+            return true;
+        }
     }
 }
