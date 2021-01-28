@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace G8InstaDev.Controllers
 {
-    [Route("Cadastro")]
+    [Route("Usuario")]
     public class CadastroController : Controller
     {
         Usuario usuarioModel = new Usuario();
@@ -21,18 +21,24 @@ namespace G8InstaDev.Controllers
             return View();
         }
 
-        [Route("Cadastrar")]
-        public IActionResult Cadastrar(IFormCollection formCadastro){
-            Usuario cadastrar = new Usuario();
-            cadastrar.IdUsuario = usuarioModel.idCadastro();
-            cadastrar.Email = formCadastro["Email"];
-            cadastrar.NomeCompleto = formCadastro["Nome Completo"];
-            cadastrar.NomeDoUsuario = formCadastro["Nome do usuário"];
-            cadastrar.Senha = formCadastro["Senha"];
+        // [Route("Cadastrar")]
+        // public IActionResult Cadastrar(IFormCollection formCadastro){
+        //     Usuario cadastrar = new Usuario();
+        //     cadastrar.IdUsuario = usuarioModel.idCadastro();
+        //     cadastrar.Email = formCadastro["Email"];
+        //     cadastrar.NomeCompleto = formCadastro["Nome Completo"];
+        //     cadastrar.NomeDoUsuario = formCadastro["Nome do usuário"];
+        //     cadastrar.Senha = formCadastro["Senha"];
 
-            usuarioModel.Create(cadastrar);
-            ViewBag.Cadastro = usuarioModel.ReadAll();
-            return LocalRedirect("~/Cadastro/Listar");
-        }
+        //     usuarioModel.Create(cadastrar);
+        //     ViewBag.Cadastro = usuarioModel.ReadAll();
+        //     return LocalRedirect("~/Usuario/Listar");
+        // }
+
+        // public IActionResult Excluir(int id){
+        //     usuarioModel.Delete(id);
+        //     ViewBag.Cadastro = usuarioModel.ReadAll();
+        //     return LocalRedirect("~/Usuario/Listar");
+        // }
     }
 }

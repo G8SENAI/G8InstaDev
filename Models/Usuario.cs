@@ -26,7 +26,7 @@ namespace G8InstaDev.Models
 
         public string Prepare(Usuario u)
         {
-            return $"{u.IdUsuario};{u.Email};{u.NomeCompleto};{u.NomeDoUsuario};{u.Senha}";
+            return $"{u.IdUsuario};{u.Email};{u.NomeCompleto};{u.NomeDoUsuario};{u.Senha};{u.DataNascimento};{u.Foto}";
         }
 
          public int idCadastro()
@@ -65,6 +65,8 @@ namespace G8InstaDev.Models
                 usuario.NomeCompleto = linha[2];
                 usuario.NomeDoUsuario = linha[3];
                 usuario.Senha = linha[4];
+                usuario.DataNascimento = DateTime.Parse(linha[5]);
+                usuario.Foto = linha[6];
 
                 cadastros.Add(usuario);
 

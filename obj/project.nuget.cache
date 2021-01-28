@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "94YXx3r/Ub2pETPsjnJkAS8Dg4RUBSmVrwuFjQxniNbME+zBPa7BopPFyg/wHeFyyMoee05tA2FaYeVHTmQNwQ==",
+  "dgSpecHash": "evic76NsP/R4/cv4HF2w1BVyaCTN/1yonfTvGGsVJdf8q/ABQS9Nes33SvDshw4dfTh2ueMVeHDRXvS61bTGvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maria\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.11\\microsoft.netcore.app.host.win-x64.3.1.11.nupkg.sha512"
+  ],
   "logs": []
 }

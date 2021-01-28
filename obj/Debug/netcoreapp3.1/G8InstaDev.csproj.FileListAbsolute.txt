@@ -224,5 +224,44 @@ C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8Inst
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.exe
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.deps.json
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.runtimeconfig.json
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.runtimeconfig.dev.json
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.dll
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.pdb
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.Views.dll
+C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.Views.pdb
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csprojAssemblyReference.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfoInputs.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfo.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CoreCompileInputs.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.Manifest.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.xml
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\scopedcss\bundle\G8InstaDev.styles.css
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.TagHelpers.input.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.TagHelpers.output.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorCoreGenerate.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Cadastro\Index.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorTargetAssemblyInfo.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorTargetAssemblyInfo.cs
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.Views.pdb
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.dll
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
+C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Cadastro\Index.cshtml.g.cs
 C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+>>>>>>> d81f3b22b7d748a5daffc89c85569dc9e1b5ac8c
