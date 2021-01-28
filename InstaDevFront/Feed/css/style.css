@@ -198,20 +198,21 @@ select:focus {
     margin: 16px 0px 0 13px;
 }
 
-.flutuando{
+.flutuando {
     float: left;
     padding-left: 52px;
 }
 
-.flutuar{
+.flutuar {
     padding-right: 20px;
 }
 
-.foto-perfil{
+.foto-perfil {
     position: absolute;
     left: 23%;
     bottom: 27%;
 }
+
 .icones,
 .comentario {
     padding-left: 20px;
@@ -222,15 +223,15 @@ select:focus {
     color: rgba(175, 175, 175, 1);
 }
 
-.texto-comentario{
+.texto-comentario {
     font-family: 'Segoe UI', sans-serif;
     font-size: 13px;
 }
 
-.fla{
+.fla {
     color: #2686CC;
 }
 
-#div_mens{
+#div_mens {
     padding-left: 18px;
 }

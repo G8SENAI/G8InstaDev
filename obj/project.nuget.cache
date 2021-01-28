@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "/WRw0bcEzct6pptXHjZvBExhhI5ZWqSVFLoYf2gKGOH6jUJx8X2leTf9tOHO8tNkLoRLOKQxUbJRIyCLfKK7JA==",
+  "dgSpecHash": "50rYLmcFCafXkyG/EQc2ul3SmLIRcS2C6yFVSYXHd+t0Zjw/buYfLh6GVBNvPQm4th7ZbNAj1HChkSm60sICLw==",
   "success": true,
-  "projectFilePath": "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\G8InstaDev.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maria\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.11\\microsoft.netcore.app.host.win-x64.3.1.11.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
