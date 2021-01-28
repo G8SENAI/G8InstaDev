@@ -73,7 +73,7 @@ namespace G8InstaDev.Models
         public void Update(Cadastro c)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == f.IdCadastro.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == c.IdCadastro.ToString());
             linhas.Add(Prepare(c));
             RewriteCSV(PATH, linhas);   
         }
