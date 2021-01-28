@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {}
+    "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {
+    "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
         "projectName": "G8InstaDev",
-        "projectPath": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
-        "packagesPath": "C:\\Users\\Maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\obj\\",
+        "projectPath": "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
+        "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\olive\\Desktop\\G8InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,7 +24,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -36,7 +35,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -47,12 +45,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.11, 3.1.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -61,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
