@@ -200,3 +200,7 @@ hr{
     float: right;
     bottom: 13.385em;
 }
+
+.erro{
+    color: var(--blue_button);
+}

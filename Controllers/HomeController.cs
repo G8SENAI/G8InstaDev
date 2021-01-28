@@ -23,6 +23,7 @@ namespace G8InstaDev.Controllers
         Feed feedModel = new Feed();
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("-UserName");
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
@@ -72,7 +73,7 @@ namespace G8InstaDev.Controllers
         {
             feedModel.Delete(id);
             ViewBag.Noticias = feedModel.ReadAll();
-            return LocalRedirect("~/Feed/Listar");
+            return LocalRedirect("~/");
         }
 
     }

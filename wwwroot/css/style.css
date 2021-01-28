@@ -1,6 +1,7 @@
 body {
     margin: 0 0 0 0;
     background-color: rgba(250, 250, 250, 1);
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .topo {
@@ -138,12 +139,8 @@ select:focus {
     margin: 26px 0px 0px 10%;
 }
 
-.btnImagem {
+#arquivo {
     margin: 0 0 0 16px;
-}
-
-.btnpostar {
-    margin: 0 0 0 24px;
 }
 
 .descricaoImagem {
@@ -159,36 +156,43 @@ select:focus {
     outline: 0;
 }
 
-.btnImagem {
-    background-color: rgba(209, 209, 209, 1);
-    color: rgba(125, 125, 125, 1);
-    border: rgba(125, 125, 125, 1);
-    border-radius: 5px;
+label {
+    padding: 5px 33px;
     width: 157px;
-    height: 27px;
+    background-color: rgba(209, 209, 209, 1);
+    border: rgba(209, 209, 209, 1);
+    border-radius: 5px;
+    color: rgba(125, 125, 125, 1);
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .btnpostar {
     background-color: rgba(38, 134, 204, 1);
-    border: rgba(38, 134, 204, 1);
+    border: rgb(80, 122, 151);
     color: white;
     width: 140px;
     height: 27px;
     border-radius: 5px;
 }
 
-.btnImagem,
+label,
 .btnpostar .btn:focus {
     outline: thin dotted;
     outline: 0px auto;
     outline-offset: 0px;
 }
 
-.btnImagem,
+label,
 .btnpostar:focus {
     outline: thin dotted;
-    outline: 0px auto -webkit-focus-ring-color;
+    outline: 0px auto;
     outline-offset: 0px;
+}
+
+#arquivo {
+    display: none;
 }
 
 .card {
@@ -196,10 +200,6 @@ select:focus {
     height: 610px;
     background-color: rgba(255, 255, 255, 1);
     margin: 35px 0 0 18%;
-}
-
-.perfil {
-    margin: 16px 0px 0 0px;
 }
 
 .flutuando {
@@ -211,22 +211,16 @@ select:focus {
     padding-right: 20px;
 }
 
-
-/* 
-.foto-perfil {
-    position: absolute;
-    left: 23%;
-    bottom: 27%;
-} */
-
-.icones,
-.comentario {
-    padding-left: 20px;
+.lixo {
+    width: 20px;
+    float: right;
+    padding: 11px 10px 0 0px;
 }
 
 .comentario {
     border: white;
     color: rgba(175, 175, 175, 1);
+    padding-left: 20px;
 }
 
 .texto-comentario {
@@ -238,6 +232,8 @@ select:focus {
     color: #2686CC;
 }
 
-#div_mens {
+#div_mens,
+#imagem_curtida,
+.texto-comentario {
     padding-left: 18px;
 }
