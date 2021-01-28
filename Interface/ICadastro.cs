@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace G8InstaDev.Interface
 {
-    public interface ICadastro
+    public interface IUsuario
     {
-        void Create (Cadastro c);
-        List<Cadastro> ReadAll();
-        void Update(Cadastro c);
+        void Create (Usuario u);
+        List<Usuario> ReadAll();
+        void Update(Usuario u);
         void Delete(int id);
     }
 }

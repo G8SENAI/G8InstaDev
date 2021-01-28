@@ -20,7 +20,7 @@ namespace G8InstaDev.Controllers
             _logger = logger;
         }
 
-        Feed feedModel = new Feed();
+        Publicacao feedModel = new Publicacao();
         public IActionResult Index()
         {
             ViewBag.UserName = HttpContext.Session.GetString("-UserName");
@@ -31,7 +31,7 @@ namespace G8InstaDev.Controllers
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
-            Feed novoFeed = new Feed();
+            Publicacao novoFeed = new Publicacao();
             novoFeed.IdPublicacao = feedModel.idPublicacao();
 
             if (form.Files.Count > 0)

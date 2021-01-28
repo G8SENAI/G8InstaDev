@@ -3,12 +3,11 @@ using G8InstaDev.Models;
 
 namespace G8InstaDev
 {
-    public interface IFeed
+    public interface IPublicacao
     {
-         void Create (Feed f);
-         List<Feed> ReadAll();
-         void Update(Feed f);
+         void Create (Publicacao p);
+         List<Publicacao> ReadAll();
+         void Update(Publicacao p);
          void Delete(int id);
-         void Alterar(int _id, Feed _novoFeed);
     }
 }

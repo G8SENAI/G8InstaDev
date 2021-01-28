@@ -1,29 +1,32 @@
 using System.IO;
 using System.Collections.Generic;
 using G8InstaDev.Interface;
+using System;
 
 namespace G8InstaDev.Models
 {
-    public class Cadastro : InstaDevBase , ICadastro
+    public class Usuario : InstaDevBase , IUsuario
     {
-        public int IdCadastro { get; set; }
+        public int IdUsuario { get; set; }
         public string Email { get; set; }
         public string NomeCompleto { get; set; }
         public string NomeDoUsuario { get; set; }
         public string Senha { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string Foto { get; set; }
+        
+        private const string PATH = "Database/Usuario.csv";
 
-        private const string PATH = "Database/Cadastro.csv";
+        Usuario usuario = new Usuario();
 
-        Cadastro usuario = new Cadastro();
-
-        public Cadastro()
+        public Usuario()
         {
             CreateFolderAndFile(PATH);
         }
 
-        public string Prepare(Cadastro c)
+        public string Prepare(Usuario u)
         {
-            return $"{c.IdCadastro};{c.Email};{c.NomeCompleto};{c.NomeDoUsuario};{c.Senha}";
+            return $"{u.IdUsuario};{u.Email};{u.NomeCompleto};{u.NomeDoUsuario};{u.Senha}";
         }
 
          public int idCadastro()
@@ -35,46 +38,46 @@ namespace G8InstaDev.Models
                 return 1;
             }
 
-            var codigo = cadastro[ cadastro.Count - 1].IdCadastro;
+            var codigo = cadastro[ cadastro.Count - 1].IdUsuario;
 
             codigo ++;
 
             return codigo;
         }
-        public void Create(Cadastro c)
+        public void Create(Usuario u)
         {
-            string[] linhas = {Prepare(c)};
+            string[] linhas = {Prepare(u)};
             File.AppendAllLines(PATH, linhas);
         }
 
-        public List<Cadastro> ReadAll()
+        public List<Usuario> ReadAll()
         {
-            List<Cadastro> cadastros = new List<Cadastro>();
+            List<Usuario> cadastros = new List<Usuario>();
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
             {
                 string[]linha = item.Split(";");
 
-                Cadastro cadastro = new Cadastro();
-                cadastro.IdCadastro = int.Parse(linha[0]);
-                cadastro.Email = linha[1];
-                cadastro.NomeCompleto = linha[2];
-                cadastro.NomeDoUsuario = linha[3];
-                cadastro.Senha = linha[4];
+                Usuario usuario = new Usuario();
+                usuario.IdUsuario = int.Parse(linha[0]);
+                usuario.Email = linha[1];
+                usuario.NomeCompleto = linha[2];
+                usuario.NomeDoUsuario = linha[3];
+                usuario.Senha = linha[4];
 
-                cadastros.Add(cadastro);
+                cadastros.Add(usuario);
 
             }
 
             return cadastros;
         }
 
-        public void Update(Cadastro c)
+        public void Update(Usuario u)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == c.IdCadastro.ToString());
-            linhas.Add(Prepare(c));
+            linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
+            linhas.Add(Prepare(u));
             RewriteCSV(PATH, linhas);   
         }
 
