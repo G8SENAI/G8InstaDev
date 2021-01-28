@@ -1,30 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\G8InstaDev.csproj": {}
+    "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\G8InstaDev.csproj": {
+    "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\G8InstaDev.csproj",
+        "projectUniqueName": "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj",
         "projectName": "G8InstaDev",
-        "projectPath": "C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\G8InstaDev.csproj",
-        "packagesPath": "C:\\Users\\Maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maria\\Desktop\\projeto1\\G8InstaDev\\obj\\",
+        "projectPath": "C:\\SENAI\\repositorio\\G8InstaDev\\G8InstaDev.csproj",
+        "packagesPath": "C:\\Users\\tolen\\.nuget\\packages\\",
+        "outputPath": "C:\\SENAI\\repositorio\\G8InstaDev\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tolen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -36,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -47,12 +51,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.11, 3.1.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -61,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
