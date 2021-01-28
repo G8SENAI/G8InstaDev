@@ -12,33 +12,27 @@ namespace G8InstaDev.Controllers
     public class CadastroController : Controller
     {
         Usuario usuarioModel = new Usuario();
-        [Route("Listar")]
+        // [Route("Listar")]
         public IActionResult Index(){
             ViewBag.Cadastro = usuarioModel.ReadAll();
 
-            Usuario novalistagemdeusuario = new Usuario();
-            ViewBag.novalistagemdeusuario = novalistagemdeusuario.ReadAll();
+            // Usuario novalistagemdeusuario = new Usuario();
+            // ViewBag.novalistagemdeusuario = usuarioModel.ReadAll();
             return View();
         }
 
-        // [Route("Cadastrar")]
-        // public IActionResult Cadastrar(IFormCollection formCadastro){
-        //     Usuario cadastrar = new Usuario();
-        //     cadastrar.IdUsuario = usuarioModel.idCadastro();
-        //     cadastrar.Email = formCadastro["Email"];
-        //     cadastrar.NomeCompleto = formCadastro["Nome Completo"];
-        //     cadastrar.NomeDoUsuario = formCadastro["Nome do usuário"];
-        //     cadastrar.Senha = formCadastro["Senha"];
+        [Route("Cadastrar")]
+        public IActionResult Cadastrar(IFormCollection formCadastro){
+            Usuario cadastrar = new Usuario();
+            cadastrar.IdUsuario = usuarioModel.idCadastro();
+            cadastrar.Email = formCadastro["Email"];
+            cadastrar.NomeCompleto = formCadastro["Nome Completo"];
+            cadastrar.NomeDoUsuario = formCadastro["Nome do usuário"];
+            cadastrar.Senha = formCadastro["Senha"];
 
-        //     usuarioModel.Create(cadastrar);
-        //     ViewBag.Cadastro = usuarioModel.ReadAll();
-        //     return LocalRedirect("~/Usuario/Listar");
-        // }
-
-        // public IActionResult Excluir(int id){
-        //     usuarioModel.Delete(id);
-        //     ViewBag.Cadastro = usuarioModel.ReadAll();
-        //     return LocalRedirect("~/Usuario/Listar");
-        // }
+            usuarioModel.Create(cadastrar);
+            ViewBag.Cadastro = usuarioModel.ReadAll();
+            return LocalRedirect("~/Usuario/Listar");
+        }
     }
 }

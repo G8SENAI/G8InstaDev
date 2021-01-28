@@ -1,29 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {}
+    "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {
+    "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
         "projectName": "G8InstaDev",
-        "projectPath": "C:\\Users\\olive\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
-        "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\olive\\Desktop\\G8InstaDev\\obj\\",
+        "projectPath": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\G8InstaDev.csproj",
+        "packagesPath": "C:\\Users\\Maria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maria\\Desktop\\G8InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -34,7 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

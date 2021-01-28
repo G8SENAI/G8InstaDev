@@ -17,7 +17,7 @@ namespace G8InstaDev.Models
         
         private const string PATH = "Database/Usuario.csv";
 
-        Usuario usuario = new Usuario();
+        // Usuario usuario = new Usuario();
 
         public Usuario()
         {
