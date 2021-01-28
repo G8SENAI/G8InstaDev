@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace G8InstaDev.Controllers
 {
-    [Route("Cadastro")]
+    [Route("Usuario")]
     public class CadastroController : Controller
     {
         Usuario usuarioModel = new Usuario();
@@ -32,7 +32,13 @@ namespace G8InstaDev.Controllers
 
             usuarioModel.Create(cadastrar);
             ViewBag.Cadastro = usuarioModel.ReadAll();
-            return LocalRedirect("~/Cadastro/Listar");
+            return LocalRedirect("~/Usuario/Listar");
+        }
+
+        public IActionResult Excluir(int id){
+            usuarioModel.Delete(id);
+            ViewBag.Cadastro = usuarioModel.ReadAll();
+            return LocalRedirect("~/Usuario/Listar");
         }
     }
 }
