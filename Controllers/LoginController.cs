@@ -14,6 +14,7 @@ namespace G8InstaDev.Controllers
 
         Usuario usuarioModel = new Usuario();
         
+        [Route("Logar")]
         public IActionResult Logar(IFormCollection form)
         {
             List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
