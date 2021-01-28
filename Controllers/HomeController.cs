@@ -73,7 +73,7 @@ namespace G8InstaDev.Controllers
         {
             feedModel.Delete(id);
             ViewBag.Noticias = feedModel.ReadAll();
-            return LocalRedirect("~/Feed/Listar");
+            return LocalRedirect("~/");
         }
 
     }
