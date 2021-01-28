@@ -186,15 +186,6 @@ C:\SENAI\repositorio\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaD
 C:\SENAI\repositorio\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.xml
 C:\SENAI\repositorio\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\SENAI\repositorio\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csprojAssemblyReference.cache
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfoInputs.cache
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfo.cs
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CoreCompileInputs.cache
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cache
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cs
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.dll
-C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -206,6 +197,13 @@ C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\G8Inst
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.Views.dll
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\bin\Debug\netcoreapp3.1\G8InstaDev.Views.pdb
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csprojAssemblyReference.cache
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfoInputs.cache
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.AssemblyInfo.cs
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CoreCompileInputs.cache
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cache
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorAssemblyInfo.cs
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.TagHelpers.input.cache
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.TagHelpers.output.cache
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.RazorCoreGenerate.cache
@@ -222,6 +220,8 @@ C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8Inst
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.Views.pdb
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.Manifest.cache
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\staticwebassets\G8InstaDev.StaticWebAssets.xml
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.dll
+C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\FIC\Desktop\InstaDev G8 Tarde\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
 C:\Users\Maria\Desktop\G8InstaDev\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -262,3 +262,6 @@ C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.dll
 C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.pdb
 C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.genruntimeconfig.cache
 C:\Users\Maria\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\G8InstaDev.csproj.CopyComplete
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Cadastro\Index.cshtml.g.cs
+C:\Users\olive\Desktop\G8InstaDev\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+>>>>>>> d81f3b22b7d748a5daffc89c85569dc9e1b5ac8c

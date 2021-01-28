@@ -1,5 +1,13 @@
 1;1;post-gabigordo 1.png;teste 01
 2;2;3.png;teste 02
 3;3;2.png;teste 03
+<<<<<<< HEAD
 4;4;padrao.png;
 5;5;padrao.png;
+=======
+4;4;padrao.png;oi
+5;5;chirs.jpg;foto doida
+6;6;padrao.png;
+7;7;padrao.png;
+8;8;padrao.png;
+>>>>>>> d81f3b22b7d748a5daffc89c85569dc9e1b5ac8c
