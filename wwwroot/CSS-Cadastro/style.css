@@ -1,50 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
 
-.boxprincipal{
+.boxprincipal {
     position: absolute;
     width: 342px;
-    height: 490px;
+    height: 461px;
     left: 495px;
-    top: 600px;
+    top: 110px;
     background: #FAFAFA;
     border: 1px solid #F1F1F1;
     box-sizing: border-box;
 }
 
-.logo{
+.logo {
     position: absolute;
     width: 165px;
     height: 63px;
     left: 90px;
-    top: 1px;
+    top: 10px;
 }
 
-.texto1{
+.texto1 {
     position: absolute;
     width: 209px;
-    height: 38px;
     left: 63px;
-    top: 45px;
-    font-size:'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
+    top: 60px;
+    font-size: 10px;
     line-height: 19px;
     text-align: center;
     color: #909090;
 }
-.box{
+
+.box {
     position: absolute;
     width: 209px;
     height: 38px;
     left: 65px;
-    top: 110px;
-    /* background: #FAFAFA; */
-    /* border: 1px solid #DCDCDC;
+    top: 145px;
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
     box-sizing: border-box;
-    border-radius: 2px; */
+    border-radius: 2px;
 }
-.box h3{
+
+.box h3 {
     position: absolute;
     width: 26px;
     height: 15px;
@@ -57,18 +59,20 @@
     font-size: 15px;
     line-height: 19px;
 }
-.box1{
+
+.box1 {
     position: absolute;
     width: 209px;
     height: 38px;
     left: 65px;
-    top: 160px;
-    /* background: #FAFAFA;
+    top: 190px;
+    background: #FAFAFA;
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
-    border-radius: 2px; */
+    border-radius: 2px;
 }
-.box1 h3{
+
+.box1 h3 {
     position: absolute;
     width: 209px;
     height: 38px;
@@ -81,18 +85,20 @@
     font-size: 15px;
     line-height: 19px;
 }
-.box2{
+
+.box2 {
     position: absolute;
     width: 209px;
     height: 38px;
     left: 65px;
-    top: 200px;
-    /* background: #FAFAFA;
+    top: 235px;
+    background: #FAFAFA;
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
-    border-radius: 2px; */
+    border-radius: 2px;
 }
-.box2 h3{
+
+.box2 h3 {
     position: absolute;
     width: 209px;
     height: 38px;
@@ -105,18 +111,20 @@
     font-size: 15px;
     line-height: 19px;
 }
-.box3{
+
+.box3 {
     position: absolute;
     width: 209px;
     height: 38px;
     left: 65px;
-    top: 245px;
-    /* background: #FAFAFA;
+    top: 280px;
+    background: #FAFAFA;
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
-    border-radius: 2px; */
+    border-radius: 2px;
 }
-.box3 h3{
+
+.box3 h3 {
     position: absolute;
     width: 209px;
     height: 38px;
@@ -129,65 +137,46 @@
     font-size: 15px;
     line-height: 19px;
 }
-.box4{
+
+.box4 button {
     position: absolute;
     width: 209px;
     height: 38px;
     left: 65px;
-    top: 290px;
-    /* background: #FAFAFA;
-    border: 1px solid #DCDCDC;
-    box-sizing: border-box;
-    border-radius: 2px; */
-}
-.box5{
-    position: absolute;
-    width: 209px;
-    height: 38px;
-    left: 65px;
-    top: 335px;
-    /* background: #FAFAFA;
-    border: 1px solid #DCDCDC;
-    box-sizing: border-box;
-    border-radius: 2px; */
-}
-.box6 button{
-    position: absolute;
-    width: 209px;
-    height: 38px;
-    left: 65px;
-    top: 385px;
+    top: 340px;
     background-color: #2686CC;
     border-radius: 2px;
     color: #FFFFFF;
 }
+
 .texto2 {
     position: absolute;
     width: 254px;
     height: 32px;
     left: 46px;
-    top: 420px;
+    top: 379px;
     font-size: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 10px;
+    font-size: 9px;
     line-height: 16px;
     text-align: center;
     color: #909090;
 }
-.boxprincipal2{
+
+.boxprincipal2 {
     position: absolute;
-    width: 342px;
     height: 75px;
     left: -1px;
-    top: 495px;
-    background: #FAFAFA; 
+    top: 465px;
+    background: #FAFAFA;
     border: 1px solid #F1F1F1;
     box-sizing: border-box;
 }
-.boxprincipal2 p{
+
+.boxprincipal2 p {
     position: absolute;
-    width: 151px;
+    width: 168px;
     height: 16px;
     left: 85px;
     top: 20px;
@@ -198,16 +187,17 @@
     line-height: 16px;
     color: #353535;
 }
-.final{
+
+.final {
     position: absolute;
     width: 342px;
     height: 99px;
     left: -1px;
-    top: 610px;
+    top: 548px;
 }
-.textfinal p{
+
+.textfinal p {
     position: absolute;
-    width: 113px;
     height: 16px;
     left: 115px;
     font-size: 'Montserrat', sans-serif;
@@ -217,14 +207,16 @@
     line-height: 16px;
     color: #353535;
 }
-.img1 img{
+
+.img1 img {
     position: absolute;
     width: 133px;
     height: 39px;
     left: 30px;
     top: 50px;
 }
-.img2 img{
+
+.img2 img {
     position: absolute;
     width: 133px;
     height: 39px;
