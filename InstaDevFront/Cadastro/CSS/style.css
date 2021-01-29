@@ -8,7 +8,11 @@ body {
     position: absolute;
     width: 342px;
     height: 461px;
+<<<<<<< HEAD
     left: 495px;
+=======
+    margin: auto;
+>>>>>>> f92ac3b1c50087a2a7ec3a53028bdfdb7cab74b9
     top: 110px;
     background: #FAFAFA;
     border: 1px solid #F1F1F1;
