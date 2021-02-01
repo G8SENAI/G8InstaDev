@@ -10,14 +10,14 @@ namespace G8InstaDev.Controllers
 
         public IActionResult Index()
         {
-            Usuario perfil = new Usuario();
+            Usuario usuario = new Usuario();
 
             
+            var userId = HttpContext.Session.GetInt32("_UserId");
+
+            // var perfil = p.BuscarUsuarioPorId(userId);
             
-            perfil.Foto = "~/img/Perfil/thank-you 3.png";
-            perfil.NomeCompleto = "Marcos Jeeves";
-            perfil.NomeDoUsuario = "yes_baby";
-            ViewBag.perfil = perfil;
+            ViewBag.perfil = usuario.ReadAll()[0]; // p.BuscarUsuarioPorId(userId);
             return View();
         }
 
@@ -28,6 +28,13 @@ namespace G8InstaDev.Controllers
             Publicacao publicacao = new Publicacao();
             ViewBag.publicacao = publicacao.ReadAll();
             return View();
+        }
+
+        [Route("Sair")]
+        public IActionResult Sair()
+        {
+            HttpContext.Session.Remove("-UserName");
+            return LocalRedirect("/Login");
         }
     }
 }

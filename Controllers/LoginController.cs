@@ -29,6 +29,7 @@ namespace G8InstaDev.Controllers
             if(logado != null)
             {
                 HttpContext.Session.SetString("-UserName", logado.Split(";")[3]);
+                HttpContext.Session.SetInt32("_UserId", int.Parse(logado.Split(";")[0]));
                 return LocalRedirect("~/Feed");
             }
 

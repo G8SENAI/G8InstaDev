@@ -6,7 +6,7 @@
 
     <section class="perfil content flex-bt-center">
         <div>
-            <img src="~/img/Perfil/thank-you 3.png" alt="Imagem do perfil">
+            <img src="~/img/Perfil/@ViewBag.perfil.Foto" alt="Imagem do perfil">
         </div>
         <div class="info">
             <div class="nick">
@@ -19,7 +19,7 @@
             </div>
             <div class="flex-bt-center">
                 <p class="nome">@ViewBag.perfil.NomeCompleto</p>
-                <a href="" class="link-style">Sair</a>
+                <a asp-area="link para logout" asp-controller="Sair" asp-action="Sair" class="link-style">Sair</a>
             </div>
         </div>
     </section>
