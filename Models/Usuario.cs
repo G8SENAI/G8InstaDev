@@ -44,6 +44,7 @@ namespace G8InstaDev.Models
         }
         public void Create(Usuario u)
         {
+            idCadastro();
             string[] linhas = {Prepare(u)};
             File.AppendAllLines(PATH, linhas);
         }
