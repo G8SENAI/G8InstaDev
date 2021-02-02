@@ -10,7 +10,7 @@ namespace G8InstaDev.Controllers
         [HttpGet("FeedAPI")]
         public List<Feed> List()
         {
-            Feed feed = new Feed();
+            Publicacao feed = new Publicacao();
             return feed.ReadAll();
         }
         [HttpGet("FeedAPI/{id}")]
@@ -22,7 +22,7 @@ namespace G8InstaDev.Controllers
         [HttpPost("FeedAPI")]
         public bool Save([FromBody] Feed f)
         {
-            Feed feed = new Feed();
+            Publicacao feed = new Publicacao();
             feed.Create(f);
             return true;
         }

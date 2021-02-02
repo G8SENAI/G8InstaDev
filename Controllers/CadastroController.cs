@@ -8,31 +8,31 @@ using Microsoft.AspNetCore.Http;
 
 namespace G8InstaDev.Controllers
 {
-    [Route("Cadastro")]
+    [Route("Usuario")]
     public class CadastroController : Controller
     {
-        Cadastro cadastroModel = new Cadastro();
-        [Route("Listar")]
+        Usuario usuarioModel = new Usuario();
+        // [Route("Listar")]
         public IActionResult Index(){
-            ViewBag.Cadastro = cadastroModel.ReadAll();
+            ViewBag.Cadastro = usuarioModel.ReadAll();
 
-            Cadastro novalistagemdecadastro = new Cadastro();
-            ViewBag.novalistagemdecadastro = novalistagemdecadastro.ReadAll();
+            // Usuario novalistagemdeusuario = new Usuario();
+            // ViewBag.novalistagemdeusuario = usuarioModel.ReadAll();
             return View();
         }
 
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection formCadastro){
-            Cadastro cadastrar = new Cadastro();
-            cadastrar.IdCadastro = cadastroModel.idCadastro();
+            Usuario cadastrar = new Usuario();
+            cadastrar.IdUsuario = usuarioModel.idCadastro();
             cadastrar.Email = formCadastro["Email"];
             cadastrar.NomeCompleto = formCadastro["Nome Completo"];
             cadastrar.NomeDoUsuario = formCadastro["Nome do usuário"];
             cadastrar.Senha = formCadastro["Senha"];
 
-            cadastroModel.Create(cadastrar);
-            ViewBag.Cadastro = cadastroModel.ReadAll();
-            return LocalRedirect("~/Cadastro/Listar");
+            usuarioModel.Create(cadastrar);
+            ViewBag.Cadastro = usuarioModel.ReadAll();
+            return LocalRedirect("~/Usuario/Listar");
         }
     }
 }

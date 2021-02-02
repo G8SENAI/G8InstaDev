@@ -3,7 +3,7 @@ using System.IO;
 
 namespace G8InstaDev.Models
 {
-    public class Feed : InstaDevBase, IFeed
+    public class Publicacao : InstaDevBase, IPublicacao
     {
         public int IdPublicacao { get; set; }
         public string Imagem { get; set; }
@@ -13,14 +13,13 @@ namespace G8InstaDev.Models
 
         private const string PATH = "Database/Feed.csv";
 
-        public Feed()
+        public Publicacao()
         {
             CreateFolderAndFile(PATH);
         }
 
-        public string Prepare(Feed f)
-        {
-            return $"{f.IdPublicacao};{f.IdUsuario};{f.Imagem};{f.Legenda}";
+        public string Prepare(Publicacao p){
+            return $"{p.IdPublicacao};{p.IdUsuario};{p.Imagem};{p.Legenda}";
         }
 
         public int idPublicacao()
@@ -54,9 +53,9 @@ namespace G8InstaDev.Models
 
             return codigo;
         }
-        public void Create(Feed f)
+        public void Create(Publicacao p)
         {
-            string[] linhas = { Prepare(f) };
+            string[] linhas = {Prepare(p)};
             File.AppendAllLines(PATH, linhas);
         }
 
@@ -67,22 +66,22 @@ namespace G8InstaDev.Models
             RewriteCSV(PATH, linhas);
         }
 
-        public List<Feed> ReadAll()
+        public List<Publicacao> ReadAll()
         {
-            List<Feed> feeds = new List<Feed>();
+            List<Publicacao> feeds = new List<Publicacao>();
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
             {
                 string[] linha = item.Split(";");
 
-                Feed feed = new Feed();
-                feed.IdPublicacao = int.Parse(linha[0]);
-                feed.IdUsuario = int.Parse(linha[1]);
-                feed.Imagem = linha[2];
-                feed.Legenda = linha[3];
+                Publicacao publicacao = new Publicacao();
+                publicacao.IdPublicacao = int.Parse(linha[0]);
+                publicacao.IdUsuario = int.Parse(linha[1]);
+                publicacao.Imagem = linha[2];
+                publicacao.Legenda = linha[3];
 
-                feeds.Add(feed);
+                feeds.Add(publicacao);
             }
 
             return feeds;
@@ -97,25 +96,12 @@ namespace G8InstaDev.Models
 
                 string[] linha = item.Split(";");
 
-                Feed feed = new Feed();
-                feed.IdPublicacao = int.Parse(linha[0]);
-                feed.IdUsuario = int.Parse(linha[1]);
-                feed.Imagem = linha[2];
-                feed.Legenda = linha[3];
-                if (feed.IdPublicacao == id)
-                {
-                    feeds.Add(feed);
-                }
-            }
-            return feeds;
-        }
-        public void Update(Feed f)
+        public void Update(Publicacao p)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == f.IdPublicacao.ToString());
-            linhas.Add(Prepare(f));
-            RewriteCSV(PATH, linhas);
+            linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
+            linhas.Add(Prepare(p));
+            RewriteCSV(PATH, linhas);   
         }
-
     }
 }

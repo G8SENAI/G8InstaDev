@@ -1,11 +1,12 @@
-﻿@{
+﻿@using G8InstaDev.Models
+@{
     ViewData["Title"] = "Home Page";
 }
 <element onclick="myScript">
 
 
-    @* <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="js/site.js"> *@
+    <link rel="stylesheet" href="css/style.css" />
+    @* <link rel="stylesheet" href="js/site.js"> *@
     <link rel="stylesheet" href="../Feed/css/style.css">
 
 
@@ -84,7 +85,7 @@
             </form>
 
     </section>
-    @foreach (Feed feed in ViewBag.Feeds)
+    @foreach (Publicacao feed in ViewBag.Feeds)
     {
         <section class="postAdicionado flex-bt-center content">
             <div class="card">
@@ -95,7 +96,7 @@
                 </div>
 
                 <div class="icones">
-                    <img id="imagem_curtida" src="" onclick="curtiu()" alt="icone curtida">
+                    <img id="imagem_curtida" src="imgs/postAdicionado/Vector.png" alt="icone curtida">
                     <img src="imgs/postAdicionado/Vector (1).png" alt="icone comentario" class="comentario">
                     <input type="text" placeholder="Comentar..." class="comentario">
                     <div class="texto-comentario" id="div_mens">2077</div>
@@ -106,20 +107,3 @@
             </div>
         </section>
     }
-
-    <script>
-        var curtidas = 2077;
-        imagem_curtida.src = "imgs/postAdicionado/Vector.png";
-
-        function curtiu() {
-            curtidas++;
-            div_mens.innerHTML = `${curtidas}`;
-            if (curtidas % 2 == 0) {
-                imagem_curtida.src = "imgs/postAdicionado/Vector.png"
-                div_mens.innerHTML = `${2078}`
-            } else {
-                imagem_curtida.src = "imgs/postAdicionado/coracaopintado.png"
-                div_mens.innerHTML = `${2077}`
-            }
-        }
-    </script>
