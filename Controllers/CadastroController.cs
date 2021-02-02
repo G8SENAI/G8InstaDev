@@ -12,12 +12,12 @@ namespace G8InstaDev.Controllers
     public class CadastroController : Controller
     {
         Usuario usuarioModel = new Usuario();
-        // [Route("Listar")]
+        [Route("Listar")]
         public IActionResult Index(){
             ViewBag.Cadastro = usuarioModel.ReadAll();
 
-            // Usuario novalistagemdeusuario = new Usuario();
-            // ViewBag.novalistagemdeusuario = usuarioModel.ReadAll();
+            Usuario novalistagemdeusuario = new Usuario();
+            ViewBag.novalistagemdeusuario = usuarioModel.ReadAll();
             return View();
         }
 

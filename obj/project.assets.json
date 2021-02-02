@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pichau\\OneDrive\\Desktop\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj",
+      "projectUniqueName": "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev.csproj",
       "projectName": "G8InstaDev",
-      "projectPath": "C:\\Users\\Pichau\\OneDrive\\Desktop\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj",
+      "projectPath": "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev.csproj",
       "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pichau\\OneDrive\\Desktop\\Nova pasta\\G8InstaDev\\obj\\",
+      "outputPath": "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"
