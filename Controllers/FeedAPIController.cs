@@ -7,19 +7,39 @@ namespace G8InstaDev.Controllers
 {
     public class FeedAPIController
     {
-        [HttpGet]
-        public List<Feed> listar()
+        [HttpGet("FeedAPI")]
+        public List<Feed> List()
         {
             Feed feed = new Feed();
             return feed.ReadAll();
         }
-
-        [HttpPost]
-        public bool Gravar(Feed f)
+        [HttpGet("FeedAPI/{id}")]
+        public List<Feed> List(int id)
+        {
+            Feed feed = new Feed();
+            return feed.Read(id);
+        }
+        [HttpPost("FeedAPI")]
+        public bool Save([FromBody] Feed f)
         {
             Feed feed = new Feed();
             feed.Create(f);
             return true;
         }
+        [HttpPut("FeedAPI")]
+        public bool Edit([FromBody] Feed f)
+        {
+            Feed feed = new Feed();
+            feed.Update(f);
+            return true;
+        }
+        [HttpDelete("FeedAPI/{id}")]
+        public bool Delete(int id)
+        {
+            Feed feed = new Feed();
+            feed.Delete(id);
+            return true;
+        }
     }
+
 }

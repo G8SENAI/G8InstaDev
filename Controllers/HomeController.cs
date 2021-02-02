@@ -75,6 +75,44 @@ namespace G8InstaDev.Controllers
             ViewBag.Noticias = feedModel.ReadAll();
             return LocalRedirect("~/");
         }
+        [Route("Editar/{id}/{idusuario}")]
+        public IActionResult Editar(IFormCollection form, int id, int idusuario)
+        {
+            Feed novoFeed = new Feed();
+            novoFeed.IdPublicacao = id;
+
+            if (form.Files.Count > 0)
+            {
+                var file = form.Files[0];
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Feed");
+
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    // Salvamos o arquivo no caminho especificado
+                    file.CopyTo(stream);
+                }
+                novoFeed.Imagem = file.FileName;
+            }
+            else
+            {
+                novoFeed.Imagem = "padrao.png";
+            }
+
+            novoFeed.Legenda = form["Legenda"];
+            novoFeed.IdUsuario = idusuario;
+
+            feedModel.Update(novoFeed);
+            ViewBag.Feeds = feedModel.ReadAll();
+            return LocalRedirect("~/");
+
+        }
+
 
     }
 }

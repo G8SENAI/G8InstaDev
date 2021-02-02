@@ -9,6 +9,6 @@ namespace G8InstaDev
          List<Feed> ReadAll();
          void Update(Feed f);
          void Delete(int id);
-         void Alterar(int _id, Feed _novoFeed);
+
     }
 }
