@@ -3,7 +3,7 @@ using System.IO;
 
 namespace G8InstaDev.Models
 {
-    public class Publicacao : InstaDevBase, IPublicacao
+    public class Publicacao : InstaDevBase , IPublicacao
     {
         public int IdPublicacao { get; set; }
         public string Imagem { get; set; }
@@ -19,7 +19,7 @@ namespace G8InstaDev.Models
         }
 
         public string Prepare(Publicacao p){
-            return $"{p.IdPublicacao};{p.IdUsuario};{p.Imagem};{p.Legenda}";
+            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda}";
         }
 
         public int idPublicacao()
@@ -32,22 +32,6 @@ namespace G8InstaDev.Models
             }
 
             var codigo = publicacoes[publicacoes.Count - 1].IdPublicacao;
-
-            codigo++;
-
-            return codigo;
-        }
-
-        public int idUsuario()
-        {
-            var usuarios = ReadAll();
-
-            if (usuarios.Count == 0)
-            {
-                return 1;
-            }
-
-            var codigo = usuarios[usuarios.Count - 1].IdUsuario;
 
             codigo++;
 
@@ -77,24 +61,14 @@ namespace G8InstaDev.Models
 
                 Publicacao publicacao = new Publicacao();
                 publicacao.IdPublicacao = int.Parse(linha[0]);
-                publicacao.IdUsuario = int.Parse(linha[1]);
-                publicacao.Imagem = linha[2];
-                publicacao.Legenda = linha[3];
+                publicacao.Imagem = linha[1];
+                publicacao.Legenda = linha[2];
 
                 feeds.Add(publicacao);
             }
 
             return feeds;
-        }
-        public List<Feed> Read(int id)
-        {
-            List<Feed> feeds = new List<Feed>();
-            string[] linhas = File.ReadAllLines(PATH);
-
-            foreach (var item in linhas)
-            {
-
-                string[] linha = item.Split(";");
+            }
 
         public void Update(Publicacao p)
         {

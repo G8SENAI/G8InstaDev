@@ -61,7 +61,6 @@ namespace G8InstaDev.Controllers
             }
 
             novoFeed.Legenda = form["Legenda"];
-            novoFeed.IdUsuario = feedModel.idUsuario();
 
             feedModel.Create(novoFeed);
             ViewBag.Feeds = feedModel.ReadAll();
@@ -74,10 +73,11 @@ namespace G8InstaDev.Controllers
             ViewBag.Noticias = feedModel.ReadAll();
             return LocalRedirect("~/");
         }
+
         [Route("Editar/{id}/{idusuario}")]
         public IActionResult Editar(IFormCollection form, int id, int idusuario)
         {
-            Feed novoFeed = new Feed();
+            Publicacao novoFeed = new Publicacao();
             novoFeed.IdPublicacao = id;
 
             if (form.Files.Count > 0)
@@ -104,14 +104,10 @@ namespace G8InstaDev.Controllers
             }
 
             novoFeed.Legenda = form["Legenda"];
-            novoFeed.IdUsuario = idusuario;
 
             feedModel.Update(novoFeed);
             ViewBag.Feeds = feedModel.ReadAll();
             return LocalRedirect("~/");
-
         }
-
-
     }
 }
