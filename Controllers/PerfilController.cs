@@ -32,6 +32,7 @@ namespace G8InstaDev.Controllers
             // var perfil = p.BuscarUsuarioPorId(userId);
             
             ViewBag.perfil = usuario.BuscarUsuarioPorId(userId); // p.BuscarUsuarioPorId(userId);
+
             return View();
         }
 

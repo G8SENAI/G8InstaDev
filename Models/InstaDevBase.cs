@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -20,6 +21,8 @@ namespace G8InstaDev.Models
                 File.Create(path);
             }
         }
+
+        
         public List<string> ReadAllLinesCSV(string path)
         {
             List<string> linhas = new List<string>();
