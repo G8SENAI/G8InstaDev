@@ -13,6 +13,8 @@ namespace G8InstaDev.Models
         public int IdUsuario { get; set; }
 
         public string FotoUsuario { get; set; }
+        public string NomeCompleto { get; set; }
+        
         
         public string NomeUsuario { get; set; }
         
@@ -89,6 +91,7 @@ namespace G8InstaDev.Models
                 var usuarioLinha = linhaBuscada.Split(";");
                 publicacao.FotoUsuario = usuarioLinha[6].ToString();
                 publicacao.NomeUsuario = usuarioLinha[3].ToString();
+                publicacao.NomeCompleto = usuarioLinha[2].ToString();
 
                 feeds.Add(publicacao);
             }
