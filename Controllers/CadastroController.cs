@@ -26,13 +26,13 @@ namespace G8InstaDev.Controllers
             Usuario cadastrar = new Usuario();
             cadastrar.IdUsuario = usuarioModel.idCadastro();
             cadastrar.Email = formCadastro["Email"];
-            cadastrar.NomeCompleto = formCadastro["Nome Completo"];
-            cadastrar.NomeDoUsuario = formCadastro["Nome do usuário"];
+            cadastrar.NomeCompleto = formCadastro["NomeCompleto"];
+            cadastrar.NomeDoUsuario = formCadastro["NomeUsuario"];
             cadastrar.Senha = formCadastro["Senha"];
 
             usuarioModel.Create(cadastrar);
             ViewBag.Cadastro = usuarioModel.ReadAll();
-            return LocalRedirect("~/Usuario/Login");
+            return LocalRedirect("~/Login");
         }
     }
 }

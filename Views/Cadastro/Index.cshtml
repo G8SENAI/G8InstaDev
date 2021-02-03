@@ -17,27 +17,26 @@
 
         <form action='@Url.Action("Cadastrar")' method="POST" class="boxprincipalforms">
             <div class="box">
-                <input type="Email" placeholder="Email" style="width: 205px; height: 30px;" required>
+                <input type="Email" name="Email" placeholder="Email" style="width: 205px; height: 30px;" required>
             </div>
 
             <div class="box1">
-                <input type="Nome completo" placeholder="Nome completo" style="width: 205px; height: 30px;" required>
+                <input type="text" name="NomeCompleto" placeholder="Nome completo" style="width: 205px; height: 30px;" required>
             </div>
 
             <div class="box2">
-                <input type="Nome de usuario" placeholder="Nome de usuario" style="width: 205px; height: 30px;" required>
+                <input type="text" name="NomeUsuario"  placeholder="Nome de usuario" style="width: 205px; height: 30px;" required>
             </div>
 
             <div class="box3">
-                <input type="password" placeholder="Senha" style="width: 207px; height: 30px;" required>
+                <input type="password" name="Senha" placeholder="Senha" style="width: 207px; height: 30px;" required>
             </div> 
 
             <div class="box4">
-               <button type="submit" style="width: 207px; height: 30px;">cadastrar <a href="../Login/Index.cshtml"></a></button>
+               <button type="submit" style="width: 207px; height: 30px;">cadastrar</button>
                 <div class="erro">@TempData.Peek("Mensagem")</div>
             </div>
         </form>
-
 
         <div class="texto2">
             <h2>Ao se cadastrar, você concorda com nossos Termos, Política de Dados e Política de Cookies.</h2>

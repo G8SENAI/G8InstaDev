@@ -85,7 +85,6 @@ namespace G8InstaDev.Models
 
         public void Delete(int id)
         {
-            
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             RewriteCSV(PATH, linhas);

@@ -28,7 +28,7 @@ namespace G8InstaDev.Controllers
 
             if(logado != null)
             {
-                HttpContext.Session.SetString("-UserName", logado.Split(";")[3]);
+                HttpContext.Session.SetString("_IdLogado", logado.Split(";")[0]);
                 return LocalRedirect("~/");
             }
 
