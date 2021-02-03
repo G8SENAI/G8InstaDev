@@ -17,11 +17,8 @@ namespace G8InstaDev.Models
         
         private const string PATH = "Database/Usuario.csv";
 
-<<<<<<< HEAD
-=======
         // Usuario usuario = new Usuario();
 
->>>>>>> master
         public Usuario()
         {
             CreateFolderAndFile(PATH);
@@ -68,12 +65,8 @@ namespace G8InstaDev.Models
                 usuario.NomeCompleto = linha[2];
                 usuario.NomeDoUsuario = linha[3];
                 usuario.Senha = linha[4];
-<<<<<<< HEAD
-                usuario.Foto = linha[5];
-=======
                 usuario.DataNascimento = DateTime.Parse(linha[5]);
                 usuario.Foto = linha[6];
->>>>>>> master
 
                 cadastros.Add(usuario);
 

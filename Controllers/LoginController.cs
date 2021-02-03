@@ -28,14 +28,10 @@ namespace G8InstaDev.Controllers
 
             if(logado != null)
             {
-<<<<<<< HEAD
-                HttpContext.Session.SetString("-UserName", logado.Split(";")[3]);
-                HttpContext.Session.SetInt32("_UserId", int.Parse(logado.Split(";")[0]));
-                return LocalRedirect("~/Feed");
-=======
+
                 HttpContext.Session.SetString("_IdLogado", logado.Split(";")[0]);
                 return LocalRedirect("~/");
->>>>>>> master
+
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
