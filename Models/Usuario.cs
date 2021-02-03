@@ -56,7 +56,7 @@ namespace G8InstaDev.Models
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
-            {
+            { 
                 string[]linha = item.Split(";");
 
                 Usuario usuario = new Usuario();
@@ -73,6 +73,31 @@ namespace G8InstaDev.Models
             }
 
             return cadastros;
+        }
+
+        public Usuario BuscarUsuarioPorId(int id)
+        {
+            Usuario usuarioBusca = new Usuario();
+
+            List<String> csv = usuarioBusca.ReadAllLinesCSV("Database/Usuario.csv");
+
+            var linhaBuscada =
+            csv.Find(
+                x =>
+                x.Split(";")[0] == id.ToString()
+            );
+
+            var usuarioLinha = linhaBuscada.Split(";");
+            Usuario usuarioBuscado = new Usuario();
+            usuarioBuscado.IdUsuario = int.Parse(usuarioLinha[0]);
+            usuarioBuscado.Email = usuarioLinha[1];
+            usuarioBuscado.NomeCompleto = usuarioLinha[2];
+            usuarioBuscado.NomeDoUsuario = usuarioLinha[3];
+            usuarioBuscado.Senha = usuarioLinha[4];
+            usuarioBuscado.DataNascimento = DateTime.Parse(usuarioLinha[5]);
+            usuarioBuscado.Foto = usuarioLinha[6];
+
+            return usuarioBuscado;
         }
 
         public void Update(Usuario u)
