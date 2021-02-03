@@ -88,9 +88,9 @@
         <section class="postAdicionado flex-bt-center content">
             <div class="card">
                 <div class="perfil">
-                    <img class="foto-perfil" src="imgs/postAdicionado/@ViewBag.Usuario.Foto" alt="Foto de perfil do usuário">
+                    <img class="foto-perfil" src="imgs/postAdicionado/@feed.FotoUsuario" alt="Foto de perfil do usuário">
                    <a asp-area="Link para excluir uma publicacao" asp-controller="Home" asp-action="Excluir" asp-route-id="@feed.IdPublicacao"><img src="imgs/lixo.png" alt="Lixeira" class="lixo"></a>
-                    <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="700">
+                    <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="400">
                 </div>
 
                 <div class="icones">
@@ -99,7 +99,7 @@
                     <input type="text" placeholder="Comentar..." class="comentario">
                 </div>
                 <div class="comentario-adicionado">
-                    <p class="texto-comentario"><b> @ViewBag.Usuario.NomeDoUsuario </b>@feed.Legenda</p>
+                    <p class="texto-comentario"><b> @feed.NomeUsuario </b>@feed.Legenda</p>
                    </div>
             </div>
         </section>

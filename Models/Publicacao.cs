@@ -12,6 +12,12 @@ namespace G8InstaDev.Models
         public string Legenda { get; set; }
         public int IdUsuario { get; set; }
 
+        public string FotoUsuario { get; set; }
+        
+        public string NomeUsuario { get; set; }
+        
+        
+
         private const string PATH = "Database/Feed.csv";
 
         Usuario usuarioModel = new Usuario();
@@ -68,6 +74,21 @@ namespace G8InstaDev.Models
                 publicacao.Imagem = linha[1];
                 publicacao.Legenda = linha[2];
                 publicacao.IdUsuario = int.Parse(linha[3]);
+
+
+
+
+
+                List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
+                var linhaBuscada =
+                csv.Find(
+                    x =>
+                    x.Split(";")[0] == linha[3]
+                );
+
+                var usuarioLinha = linhaBuscada.Split(";");
+                publicacao.FotoUsuario = usuarioLinha[6].ToString();
+                publicacao.NomeUsuario = usuarioLinha[3].ToString();
 
                 feeds.Add(publicacao);
             }
