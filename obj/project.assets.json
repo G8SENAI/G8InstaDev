@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    "net5.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\pedro\\.nuget\\packages\\": {}
@@ -13,24 +13,37 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\G8InstaDev\\G8InstaDev.csproj",
       "projectName": "G8InstaDev",
       "projectPath": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\G8InstaDev\\G8InstaDev.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\G8InstaDev\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj",
+      "projectName": "G8InstaDev",
+      "projectPath": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj",
+      "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\obj\\",
+>>>>>>> master
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
+<<<<<<< HEAD
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+=======
+        "net5.0": {
+          "targetAlias": "net5.0",
+>>>>>>> master
           "projectReferences": {}
         }
       },
@@ -41,8 +54,13 @@
       }
     },
     "frameworks": {
+<<<<<<< HEAD
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+=======
+      "net5.0": {
+        "targetAlias": "net5.0",
+>>>>>>> master
         "imports": [
           "net461",
           "net462",

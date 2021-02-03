@@ -17,6 +17,11 @@ namespace G8InstaDev.Models
         
         private const string PATH = "Database/Usuario.csv";
 
+<<<<<<< HEAD
+=======
+        // Usuario usuario = new Usuario();
+
+>>>>>>> master
         public Usuario()
         {
             CreateFolderAndFile(PATH);
@@ -24,7 +29,7 @@ namespace G8InstaDev.Models
 
         public string Prepare(Usuario u)
         {
-            return $"{u.IdUsuario};{u.Email};{u.NomeCompleto};{u.NomeDoUsuario};{u.Senha}";
+            return $"{u.IdUsuario};{u.Email};{u.NomeCompleto};{u.NomeDoUsuario};{u.Senha};{u.DataNascimento};{u.Foto}";
         }
 
          public int idCadastro()
@@ -54,7 +59,7 @@ namespace G8InstaDev.Models
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
-            {
+            { 
                 string[]linha = item.Split(";");
 
                 Usuario usuario = new Usuario();
@@ -63,13 +68,43 @@ namespace G8InstaDev.Models
                 usuario.NomeCompleto = linha[2];
                 usuario.NomeDoUsuario = linha[3];
                 usuario.Senha = linha[4];
+<<<<<<< HEAD
                 usuario.Foto = linha[5];
+=======
+                usuario.DataNascimento = DateTime.Parse(linha[5]);
+                usuario.Foto = linha[6];
+>>>>>>> master
 
                 cadastros.Add(usuario);
 
             }
 
             return cadastros;
+        }
+
+        public Usuario BuscarUsuarioPorId(int id)
+        {
+            Usuario usuarioBusca = new Usuario();
+
+            List<String> csv = usuarioBusca.ReadAllLinesCSV("Database/Usuario.csv");
+
+            var linhaBuscada =
+            csv.Find(
+                x =>
+                x.Split(";")[0] == id.ToString()
+            );
+
+            var usuarioLinha = linhaBuscada.Split(";");
+            Usuario usuarioBuscado = new Usuario();
+            usuarioBuscado.IdUsuario = int.Parse(usuarioLinha[0]);
+            usuarioBuscado.Email = usuarioLinha[1];
+            usuarioBuscado.NomeCompleto = usuarioLinha[2];
+            usuarioBuscado.NomeDoUsuario = usuarioLinha[3];
+            usuarioBuscado.Senha = usuarioLinha[4];
+            usuarioBuscado.DataNascimento = DateTime.Parse(usuarioLinha[5]);
+            usuarioBuscado.Foto = usuarioLinha[6];
+
+            return usuarioBuscado;
         }
 
         public void Update(Usuario u)
@@ -82,7 +117,6 @@ namespace G8InstaDev.Models
 
         public void Delete(int id)
         {
-            
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             RewriteCSV(PATH, linhas);

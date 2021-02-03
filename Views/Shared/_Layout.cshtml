@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - G8InstaDev</title>
         <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/CSS-Cadastro/style.css">
    
 
 </head>
@@ -26,7 +27,7 @@
                     <img src="imgs/plane 1.png" alt="Plano" class="logoss">
                     <img src="imgs/compass 1.png" alt="Compasso" class="logoss">
                     <img src="imgs/coraçao.png" alt="Curtidas" class="logoss">
-                    <a href="../Perfil/Index.html"><img src="imgs/thank-you 1.png" alt="Foto do usuário" class="logoss"></a>
+                    <a asp-controller="Perfil" asp-action="" asp-route-idUsuario="0"><img src="imgs/thank-you 1.png" alt="Foto do usuário" class="logoss"></a>
                 </div>
             </div>
         </div>

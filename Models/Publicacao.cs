@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace G8InstaDev.Models
 {
@@ -9,51 +11,47 @@ namespace G8InstaDev.Models
         public string Imagem { get; set; }
         public string Legenda { get; set; }
         public int IdUsuario { get; set; }
+
+        public string FotoUsuario { get; set; }
+        public string NomeCompleto { get; set; }
+        
+        
+        public string NomeUsuario { get; set; }
+        
+        
+
         private const string PATH = "Database/Feed.csv";
+
+        Usuario usuarioModel = new Usuario();
 
         public Publicacao()
         {
             CreateFolderAndFile(PATH);
         }
 
-        public string Prepare(Publicacao p){
-            return $"{p.IdPublicacao};{p.IdUsuario};{p.Imagem};{p.Legenda}";
+        public string Prepare(Publicacao p)
+        {
+            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};{p.IdUsuario}";
         }
-        
+
         public int idPublicacao()
         {
             var publicacoes = ReadAll();
 
-            if(publicacoes.Count == 0)
+            if (publicacoes.Count == 0)
             {
                 return 1;
             }
 
-            var codigo = publicacoes[ publicacoes.Count - 1].IdPublicacao;
+            var codigo = publicacoes[publicacoes.Count - 1].IdPublicacao;
 
-            codigo ++;
-
-            return codigo;
-        }
-
-        public int idUsuario()
-        {
-            var usuarios = ReadAll();
-
-            if(usuarios.Count == 0)
-            {
-                return 1;
-            }
-
-            var codigo = usuarios[ usuarios.Count - 1].IdUsuario;
-
-            codigo ++;
+            codigo++;
 
             return codigo;
         }
         public void Create(Publicacao p)
         {
-            string[] linhas = {Prepare(p)};
+            string[] linhas = { Prepare(p) };
             File.AppendAllLines(PATH, linhas);
         }
 
@@ -71,13 +69,29 @@ namespace G8InstaDev.Models
 
             foreach (var item in linhas)
             {
-                string[]linha = item.Split(";");
+                string[] linha = item.Split(";");
 
                 Publicacao publicacao = new Publicacao();
                 publicacao.IdPublicacao = int.Parse(linha[0]);
-                publicacao.IdUsuario = int.Parse(linha[1]);
-                publicacao.Imagem = linha[2];
-                publicacao.Legenda = linha[3];
+                publicacao.Imagem = linha[1];
+                publicacao.Legenda = linha[2];
+                publicacao.IdUsuario = int.Parse(linha[3]);
+
+
+
+
+
+                List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
+                var linhaBuscada =
+                csv.Find(
+                    x =>
+                    x.Split(";")[0] == linha[3]
+                );
+
+                var usuarioLinha = linhaBuscada.Split(";");
+                publicacao.FotoUsuario = usuarioLinha[6].ToString();
+                publicacao.NomeUsuario = usuarioLinha[3].ToString();
+                publicacao.NomeCompleto = usuarioLinha[2].ToString();
 
                 feeds.Add(publicacao);
             }
@@ -90,12 +104,25 @@ namespace G8InstaDev.Models
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
             linhas.Add(Prepare(p));
-            RewriteCSV(PATH, linhas);   
+            RewriteCSV(PATH, linhas);
         }
 
-        public void Alterar(int _id, Publicacao _novoFeed)
+        public Usuario Buscar(int id)
         {
-            throw new System.NotImplementedException();
+
+            List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
+
+            var linhaBuscada =
+            csv.Find(
+                x =>
+                x.Split(";")[0] == id.ToString()
+            );
+
+            var usuarioLinha = linhaBuscada.Split(";");
+            Usuario usuarioBuscado = new Usuario();
+            usuarioBuscado.Foto = usuarioLinha[6].ToString();
+            usuarioBuscado.NomeDoUsuario = usuarioLinha[3].ToString();
+            return usuarioBuscado;
         }
     }
 }

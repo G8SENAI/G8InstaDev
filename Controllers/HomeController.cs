@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace G8InstaDev.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -22,8 +23,8 @@ namespace G8InstaDev.Controllers
 
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
-        {
-            ViewBag.UserName = HttpContext.Session.GetString("-UserName");
+        {   
+            // ViewBag.Usuario = feedModel.Buscar(int.Parse(IdPublicacao));
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
@@ -62,8 +63,7 @@ namespace G8InstaDev.Controllers
             }
 
             novoFeed.Legenda = form["Legenda"];
-            novoFeed.IdUsuario = feedModel.idUsuario();
-
+            novoFeed.IdUsuario = int.Parse(HttpContext.Session.GetString("_IdLogado"));
             feedModel.Create(novoFeed);
             ViewBag.Feeds = feedModel.ReadAll();
             return LocalRedirect("~/");
@@ -76,5 +76,43 @@ namespace G8InstaDev.Controllers
             return LocalRedirect("~/");
         }
 
+       
+
+
+        // [Route("Editar/{id}/{idusuario}")]
+        // public IActionResult Editar(IFormCollection form, int id, int idusuario)
+        // {
+        //     Publicacao novoFeed = new Publicacao();
+        //     novoFeed.IdPublicacao = id;
+
+        //     if (form.Files.Count > 0)
+        //     {
+        //         var file = form.Files[0];
+        //         var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Feed");
+
+        //         if (!Directory.Exists(folder))
+        //         {
+        //             Directory.CreateDirectory(folder);
+        //         }
+
+        //         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+        //         using (var stream = new FileStream(path, FileMode.Create))
+        //         {
+        //             // Salvamos o arquivo no caminho especificado
+        //             file.CopyTo(stream);
+        //         }
+        //         novoFeed.Imagem = file.FileName;
+        //     }
+        //     else
+        //     {
+        //         novoFeed.Imagem = "padrao.png";
+        //     }
+
+        //     novoFeed.Legenda = form["Legenda"];
+
+        //     feedModel.Update(novoFeed);
+        //     ViewBag.Feeds = feedModel.ReadAll();
+        //     return LocalRedirect("~/");
+        // }
     }
 }

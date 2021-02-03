@@ -1,11 +1,10 @@
-﻿@{
+﻿@using G8InstaDev.Models
+@{
     ViewData["Title"] = "Home Page";
 }
-<element onclick="myScript">
 
 
-    @* <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="js/site.js"> *@
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="../Feed/css/style.css">
 
 
@@ -56,6 +55,7 @@
         </div>
     </section>
 
+    
     <div class="fotoUSUARIO">
         <a href="../Perfil/Index.html"><img src="imgs/storys/thank-you 2.png" alt="foto de perfil do usuario logado"
                 class="descida"></a>
@@ -89,19 +89,18 @@
         <section class="postAdicionado flex-bt-center content">
             <div class="card">
                 <div class="perfil">
-                    <img class="foto-perfil" src="imgs/postAdicionado/gabigordo 2.png" alt="Foto de perfil do usuário">
+                    <img class="foto-perfil" src="imgs/postAdicionado/@feed.FotoUsuario" alt="Foto de perfil do usuário">
                    <a asp-area="Link para excluir uma publicacao" asp-controller="Home" asp-action="Excluir" asp-route-id="@feed.IdPublicacao"><img src="imgs/lixo.png" alt="Lixeira" class="lixo"></a>
-                    <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="700">
+                    <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="400">
                 </div>
 
                 <div class="icones">
                     <img id="imagem_curtida" src="imgs/postAdicionado/Vector.png" alt="icone curtida">
                     <img src="imgs/postAdicionado/Vector (1).png" alt="icone comentario" class="comentario">
                     <input type="text" placeholder="Comentar..." class="comentario">
-                    <div class="texto-comentario" id="div_mens">2077</div>
                 </div>
                 <div class="comentario-adicionado">
-                    <p class="texto-comentario"><b>gabigordo</b> @feed.Legenda</p>
+                    <p class="texto-comentario"><b> @feed.NomeUsuario </b>@feed.Legenda</p>
                    </div>
             </div>
         </section>
