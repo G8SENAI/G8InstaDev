@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj": {}
+    "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev\\G8InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj": {
+    "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev\\G8InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev\\G8InstaDev.csproj",
         "projectName": "G8InstaDev",
-        "projectPath": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\G8InstaDev.csproj",
-        "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro\\Desktop\\Projetos\\G8InstaDev\\Nova pasta\\G8InstaDev\\obj\\",
+        "projectPath": "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev\\G8InstaDev.csproj",
+        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pichau\\OneDrive\\Desktop\\InstaDevG8\\G8InstaDev\\G8InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

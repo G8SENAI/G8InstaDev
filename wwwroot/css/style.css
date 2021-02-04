@@ -108,12 +108,14 @@ select:focus {
 .sobe {
     position: relative;
     bottom: 22px;
+    font-size: 16px;
 }
 
 .espacao {
-    margin-left: 65px;
+    /* margin-left: 65px; */
     position: absolute;
     bottom: 10px;
+    font-size: 16px;
 }
 
 .retangulo {

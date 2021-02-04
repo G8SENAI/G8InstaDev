@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace G8InstaDev.Controllers
 {
-    
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -23,8 +23,9 @@ namespace G8InstaDev.Controllers
 
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
-        {   
-            // ViewBag.Usuario = feedModel.Buscar(int.Parse(IdPublicacao));
+        {
+            ViewBag.NomeUsuario = HttpContext.Session.GetString("_UserName");
+            ViewBag.NomeCompleto = HttpContext.Session.GetString("_NomeCompleto");
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
@@ -76,7 +77,7 @@ namespace G8InstaDev.Controllers
             return LocalRedirect("~/");
         }
 
-       
+
 
 
         // [Route("Editar/{id}/{idusuario}")]
