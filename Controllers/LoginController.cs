@@ -37,7 +37,7 @@ namespace G8InstaDev.Controllers
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
 
         

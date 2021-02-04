@@ -32,7 +32,7 @@ namespace G8InstaDev.Controllers
 
             usuarioModel.Create(cadastrar);
             ViewBag.Cadastro = usuarioModel.ReadAll();
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
     }
 }

@@ -19,6 +19,8 @@ namespace G8InstaDev.Controllers
         [Route("Listar")]
          public IActionResult Index()
          {
+             ViewBag.NomeUsuario = HttpContext.Session.GetString("_UserName");
+             ViewBag.NomeCompleto = HttpContext.Session.GetString("_NomeCompleto");
              ViewBag.Feeds = feedModel.ReadAll();
              return View();
          }
@@ -60,7 +62,7 @@ namespace G8InstaDev.Controllers
             novoFeed.IdUsuario = int.Parse(HttpContext.Session.GetString("_IdLogado"));
             feedModel.Create(novoFeed);
             ViewBag.Feeds = feedModel.ReadAll();
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Feed/Listar");
 
         }
 
@@ -69,7 +71,7 @@ namespace G8InstaDev.Controllers
         {
             feedModel.Delete(id);
             ViewBag.Jogadores = feedModel.ReadAll();
-            return LocalRedirect("~/Jogador/Listar");
+            return LocalRedirect("~/Feed/Listar");
         }
 
     }
