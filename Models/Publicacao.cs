@@ -96,7 +96,44 @@ namespace G8InstaDev.Models
                 feeds.Add(publicacao);
             }
 
+            feeds.Reverse();
+
             return feeds;
+        }
+
+        public List<Publicacao> AcharPostsDoUsuario(int id)
+        {
+            List<Publicacao> publicacoes = new List<Publicacao>();
+
+            Usuario usuarioModel = new Usuario();
+
+            var usuarioLinha = usuarioModel.BuscarUsuarioPorId(id);
+            
+            List<string> linhas = new List<string>();
+            linhas.AddRange(File.ReadAllLines(PATH));
+
+            var linhasDoUsuario = linhas.FindAll(x => x.Split(";")[3] == id.ToString());
+
+            foreach (var item in linhasDoUsuario)
+            {
+                string[] linha = item.Split(";");
+
+
+                Publicacao publicacao = new Publicacao();
+                publicacao.IdPublicacao = int.Parse(linha[0]);
+                publicacao.Imagem = linha[1];
+                publicacao.Legenda = linha[2];
+                publicacao.IdUsuario = int.Parse(linha[3]);
+                publicacao.FotoUsuario = usuarioLinha.Foto;
+                publicacao.NomeUsuario = usuarioLinha.NomeDoUsuario;
+                publicacao.NomeCompleto = usuarioLinha.NomeCompleto;
+
+                publicacoes.Add(publicacao);
+            }
+
+            publicacoes.Reverse();
+
+            return publicacoes;
         }
 
         public void Update(Publicacao p)
