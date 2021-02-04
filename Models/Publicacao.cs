@@ -101,6 +101,17 @@ namespace G8InstaDev.Models
             return feeds;
         }
 
+        public List<Publicacao> Read(int id)
+        {
+            List<Publicacao> pubs = ReadAll();
+
+            pubs = pubs.FindAll(pub => pub.IdPublicacao == id);
+            pubs.Reverse();
+
+            return pubs;
+        }
+
+
         public List<Publicacao> AcharPostsDoUsuario(int id)
         {
             List<Publicacao> publicacoes = new List<Publicacao>();
@@ -146,7 +157,6 @@ namespace G8InstaDev.Models
 
         public Usuario Buscar(int id)
         {
-
             List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
 
             var linhaBuscada =

@@ -106,22 +106,20 @@ select:focus {
 }
 
 .sobe {
-    position: relative;
-    bottom: 22px;
+    color: black;
     font-size: 16px;
 }
 
 .espacao {
     /* margin-left: 65px; */
-    position: absolute;
-    bottom: 10px;
+    color: black;
     font-size: 16px;
 }
 
 .retangulo {
     margin: 35px 0 0 18%;
     background-color: white;
-    width: 700px;
+    width: 5000px;
     height: 166px;
 }
 
@@ -238,4 +236,29 @@ label,
 #imagem_curtida,
 .texto-comentario {
     padding-left: 18px;
+}
+
+
+.flex-comentario{
+    display: flex;
+    max-width: 33em;
+    font-size: 0.8em;
+    padding-left: 18px ;
+    /* background-color: blue; */
+}
+
+.nome {
+    font-weight: bold;
+}
+
+.overflow-wrap{
+    overflow-wrap: break-word;
+}
+
+.rodape-comentarios{
+    font-size: 1em;
+    height: 2em;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: red; */
 }

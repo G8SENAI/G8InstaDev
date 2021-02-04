@@ -39,7 +39,7 @@ namespace G8InstaDev.Controllers
         public IActionResult Sair()
         {
             HttpContext.Session.Remove("_IdLogado");
-            return LocalRedirect("/Login");
+            return LocalRedirect("~/");
         }
     }
 }

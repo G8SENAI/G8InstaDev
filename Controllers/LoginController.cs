@@ -6,7 +6,7 @@ using G8InstaDev.Models;
 
 namespace G8InstaDev.Controllers
 {
-    [Route("Login")]
+
     public class LoginController : Controller
     {
         [TempData]
@@ -22,9 +22,10 @@ namespace G8InstaDev.Controllers
             var logado = 
             csv.Find(
                 x =>
-                x.Split(";")[1] == form["Email"] &&
+                x.Split(";")[1] == form["Username_Email"] &&
                 x.Split(";")[4] == form["Senha"]
             );
+
 
             if(logado != null)
             {
@@ -32,12 +33,14 @@ namespace G8InstaDev.Controllers
                 HttpContext.Session.SetString("_IdLogado", logado.Split(";")[0]);
                 HttpContext.Session.SetString("_UserName", logado.Split(";")[3]);
                 HttpContext.Session.SetString("_NomeCompleto", logado.Split(";")[2]);
-                return LocalRedirect("~/");
+                HttpContext.Session.SetString("_Email", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_Foto", logado.Split(";")[6]);
+                return LocalRedirect("~/Feed/Listar");
 
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
 
         
