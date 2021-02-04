@@ -15,6 +15,7 @@ namespace G8InstaDev_master.Controllers
         public IActionResult Index(){
             ViewBag.Editar = editar.ReadAll(); 
             return View();
+            
         }
 
         [Route("Cadastrar")]
