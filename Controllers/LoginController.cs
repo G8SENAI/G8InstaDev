@@ -32,6 +32,8 @@ namespace G8InstaDev.Controllers
                 HttpContext.Session.SetString("_IdLogado", logado.Split(";")[0]);
                 HttpContext.Session.SetString("_UserName", logado.Split(";")[3]);
                 HttpContext.Session.SetString("_NomeCompleto", logado.Split(";")[2]);
+                HttpContext.Session.SetString("_Email", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_Foto", logado.Split(";")[6]);
                 return LocalRedirect("~/Feed/Listar");
 
             }

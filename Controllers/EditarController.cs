@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using G8InstaDev.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using System.Collections.Generic;
 
 namespace G8InstaDev_master.Controllers
 {
@@ -13,6 +14,9 @@ namespace G8InstaDev_master.Controllers
 
         [Route("Listar")]
         public IActionResult Index(){
+            
+            ViewBag.Usuario = editar.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
+
             ViewBag.Editar = editar.ReadAll(); 
             return View();
             
@@ -41,17 +45,24 @@ namespace G8InstaDev_master.Controllers
                     file.CopyTo(stream);
                 }
 
+                
+                usuarioNovo.Foto = file.FileName;
+
+            }
+            else
+            {
+
                 usuarioNovo.Foto = "padrao.png";
+            }
 
-                }
-
+            usuarioNovo.IdUsuario = int.Parse(HttpContext.Session.GetString("_IdLogado"));
             usuarioNovo.Email = form["Email"];
             usuarioNovo.NomeCompleto = form["NomeCompleto"];
             usuarioNovo.NomeDoUsuario = form["NomeUsuario"];
-
-            editar.Create(usuarioNovo);
+            usuarioNovo.Senha = form["Senha"];
+            editar.Update(usuarioNovo);
             ViewBag.Editar = editar.ReadAll();
-            return LocalRedirect("~/Editar");
+            return LocalRedirect("~/Editar/Listar");
         }
 
         [Route("{id}")]
@@ -60,6 +71,12 @@ namespace G8InstaDev_master.Controllers
             ViewBag.Editar = editar.ReadAll();
             return LocalRedirect("~/Editar/Listar");
         }
+        public IActionResult Alterar(Usuario u)
+        {
+            editar.Update(u);
+            return LocalRedirect("~/Editar/Listar");
+        } 
+        
 
     }   
 }

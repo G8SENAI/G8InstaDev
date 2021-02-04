@@ -28,6 +28,7 @@ namespace G8InstaDev.Controllers
             cadastrar.Email = formCadastro["Email"];
             cadastrar.NomeCompleto = formCadastro["NomeCompleto"];
             cadastrar.NomeDoUsuario = formCadastro["NomeUsuario"];
+            cadastrar.Foto = formCadastro["Default"];
             cadastrar.Senha = formCadastro["Senha"];
 
             usuarioModel.Create(cadastrar);

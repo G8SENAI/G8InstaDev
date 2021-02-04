@@ -157,7 +157,6 @@ namespace G8InstaDev.Models
 
         public Usuario Buscar(int id)
         {
-
             List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
 
             var linhaBuscada =
