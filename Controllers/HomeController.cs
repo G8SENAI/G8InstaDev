@@ -24,8 +24,6 @@ namespace G8InstaDev.Controllers
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
         {
-            ViewBag.NomeUsuario = HttpContext.Session.GetString("_UserName");
-            ViewBag.NomeCompleto = HttpContext.Session.GetString("_NomeCompleto");
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
