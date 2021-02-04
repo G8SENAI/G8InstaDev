@@ -101,6 +101,17 @@ namespace G8InstaDev.Models
             return feeds;
         }
 
+        public List<Publicacao> Read(int id)
+        {
+            List<Publicacao> pubs = ReadAll();
+
+            pubs = pubs.FindAll(pub => pub.IdPublicacao == id);
+            pubs.Reverse();
+
+            return pubs;
+        }
+
+
         public List<Publicacao> AcharPostsDoUsuario(int id)
         {
             List<Publicacao> publicacoes = new List<Publicacao>();
