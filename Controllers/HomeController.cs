@@ -24,6 +24,9 @@ namespace G8InstaDev.Controllers
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
         {   
+            if (HttpContext.Session.GetString("_IdLogado") == null)
+                return LocalRedirect("/Login");
+            
             // ViewBag.Usuario = feedModel.Buscar(int.Parse(IdPublicacao));
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
