@@ -13,13 +13,14 @@
             <p>@ViewBag.perfil.NomeDoUsuario</p>
         </div>
         <div class="contadores">
-            <p>2 publicações</p>
+            <p>@ViewBag.publicacao.Count publicações</p>
             <a href="">128 seguindo</a>
             <a href="">214 seguidores</a>
         </div>
         <div class="flex-bt-center">
             <p class="nome">@ViewBag.perfil.NomeCompleto</p>
-            <a asp-area="link para logout" asp-controller="Perfil" asp-action="Sair" class="link-style">Sair</a>
+            <a aria-label="Link para a pagina de editar perfil" asp-controller="Editar" class="link-style">Editar Perfil</a>
+            <a aria-label="link para logout" asp-controller="Perfil" asp-action="Sair" class="link-style">Sair</a>
         </div>
     </div>
 </section>

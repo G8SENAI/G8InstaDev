@@ -23,9 +23,17 @@ namespace G8InstaDev.Controllers
 
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
+<<<<<<< HEAD
         {
             ViewBag.NomeUsuario = HttpContext.Session.GetString("_UserName");
             ViewBag.NomeCompleto = HttpContext.Session.GetString("_NomeCompleto");
+=======
+        {   
+            if (HttpContext.Session.GetString("_IdLogado") == null)
+                return LocalRedirect("/Login");
+            
+            // ViewBag.Usuario = feedModel.Buscar(int.Parse(IdPublicacao));
+>>>>>>> 676b8752cf1ffbb537ef530a3fc631226c9e105d
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }

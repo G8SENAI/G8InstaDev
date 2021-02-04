@@ -15,23 +15,14 @@ namespace G8InstaDev.Controllers
             var userId = -1;
 
             if(idUsuario == 0)
-            {
                 userId = int.Parse(HttpContext.Session.GetString("_IdLogado"));
-                
-            }else
-            {
+            else
                 userId = idUsuario;
-                
-            }
-            
-
 
             Publicacao publicacao = new Publicacao();
-            ViewBag.publicacao = publicacao.ReadAll();
+            ViewBag.publicacao = publicacao.AcharPostsDoUsuario(userId);
 
-            // var perfil = p.BuscarUsuarioPorId(userId);
-            
-            ViewBag.perfil = usuario.BuscarUsuarioPorId(userId); // p.BuscarUsuarioPorId(userId);
+            ViewBag.perfil = usuario.BuscarUsuarioPorId(userId); 
 
             return View();
         }
