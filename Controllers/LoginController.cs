@@ -6,7 +6,7 @@ using G8InstaDev.Models;
 
 namespace G8InstaDev.Controllers
 {
-    [Route("Login")]
+
     public class LoginController : Controller
     {
         [TempData]
@@ -37,7 +37,7 @@ namespace G8InstaDev.Controllers
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
 
         
