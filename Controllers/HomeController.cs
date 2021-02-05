@@ -24,7 +24,8 @@ namespace G8InstaDev.Controllers
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
         {
-            
+            // Usuario usuario = new Usuario();
+            // ViewBag.usuarioBuscado = usuario.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
