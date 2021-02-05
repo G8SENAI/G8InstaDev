@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     background: #FAFAFA;
+}
+
+* {
+    text-decoration: none;
 }
 
 .boxprincipal {
@@ -18,7 +22,7 @@ body {
     justify-content: space-between;
 }
 
-.boxprincipalforms{
+.boxprincipalforms {
     width: 408px;
     height: 550px;
     background: #FFFFFF;
@@ -47,8 +51,8 @@ body {
 .box {
     width: 209px;
     height: 38px;
-    background: #FAFAFA;
-    border: 1px solid #DCDCDC;
+    background-color: rgba(250, 250, 250, 1);
+    border: 1px solid rgba(250, 250, 250, 1);
     box-sizing: border-box;
     border-radius: 2px;
 }
@@ -66,8 +70,8 @@ body {
 .box1 {
     width: 209px;
     height: 38px;
-    background: #FAFAFA;
-    border: 1px solid #DCDCDC;
+    background-color: rgba(250, 250, 250, 1);
+    border: 1px solid rgba(250, 250, 250, 1);
     box-sizing: border-box;
     border-radius: 2px;
 }
@@ -76,7 +80,7 @@ body {
     width: 209px;
     height: 38px;
     color: #afafafe3;
-    font-size: 'Montserrat', sans-serif;
+    /* font-size: 'Montserrat', sans-serif; */
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -96,7 +100,7 @@ body {
     width: 209px;
     height: 38px;
     color: #afafafe3;
-    font-size: 'Montserrat', sans-serif;
+    /* font-size: 'Montserrat', sans-serif; */
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -116,7 +120,7 @@ body {
     width: 209px;
     height: 38px;
     color: #afafafe3;
-    font-size: 'Montserrat', sans-serif;
+    /* font-size: 'Montserrat', sans-serif; */
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -126,18 +130,21 @@ body {
 .box4 button {
     width: 209px;
     height: 38px;
-    background-color: #2686CC;
-    color: #FFFFFF;
+    background-color: rgba(38, 134, 204, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bolder;
 }
 
 .texto2 {
     width: 254px;
-    font-size: 9px;
+    font-size: 8px;
     text-align: center;
-    color: #909090;
+    color: rgba(144, 144, 144, 1);
 }
 
 .boxprincipal2 {
+    /* font-family: 'Montserrat', sans-serif; */
     height: 75px;
     background: #FFFFFF;
     border: 1px solid #F1F1F1;
@@ -146,9 +153,14 @@ body {
 
 .boxprincipal2 p {
     height: 16px;
-    font-size: 'Montserrat', sans-serif;
+    /* font-size: 'Montserrat', sans-serif; */
     font-size: 13px;
-    color: #353535;
+    color: black;
+}
+
+.conecte {
+    color: rgba(38, 134, 204, 1);
+    text-decoration: none;
 }
 
 .final {
@@ -159,11 +171,11 @@ body {
 .textfinal p {
     height: 16px;
     font-size: 13px;
-    color: #353535;
+    color: black;
     text-align: center;
 }
 
-.img{
+.img {
     display: flex;
     justify-content: space-around;
 }
