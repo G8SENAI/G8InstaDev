@@ -22,7 +22,7 @@ namespace G8InstaDev.Controllers
             Usuario usuario = new Usuario();
             ViewBag.usuario = usuario.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
             ViewBag.Feeds = feedModel.ReadAll();
-             return View();
+            return View();
          }
 
         [Route("Cadastrar")]
