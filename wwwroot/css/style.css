@@ -78,6 +78,12 @@ select:focus {
     padding-top: 11px;
 }
 
+.imagem-de-perfil-header{
+    margin-left: 1em;
+    max-width: 2.5em;
+    border-radius: 100%;
+}
+
 .storys {
     justify-content: center;
     align-items: center;
