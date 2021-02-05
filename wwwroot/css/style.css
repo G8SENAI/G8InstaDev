@@ -75,7 +75,7 @@ select:focus {
 
 .logoss {
     padding-left: 25px;
-    padding-top: 3px;
+    padding-top: 11px;
 }
 
 .storys {
@@ -92,18 +92,25 @@ select:focus {
     margin-top: 15px;
 }
 
+.foto-perfil {
+    border-radius: 50%;
+}
+
 .foto-story,
 .espacamento {
     padding-top: 5px;
     padding-left: 30px;
 }
 
-.imagem-de-perfil{
-    max-width: 8em;
+.imagem-de-perfil {
+    max-width: 5em;
     border-radius: 100%;
+    position: relative;
+    right: 70px;
+    bottom: 5px;
 }
 
-.imagem-de-perfil-post{
+.imagem-de-perfil-post {
     max-width: 4em;
     border-radius: 100%;
 }
@@ -121,15 +128,17 @@ select:focus {
 }
 
 .espacao {
-    /* margin-left: 65px; */
     color: black;
     font-size: 16px;
+    position: relative;
+    bottom: 117px;
+    left: 25px;
 }
 
 .retangulo {
     margin: 35px 0 0 18%;
     background-color: white;
-    width: 5000px;
+    width: 700px;
     height: 166px;
 }
 
@@ -248,12 +257,11 @@ label,
     padding-left: 18px;
 }
 
-
-.flex-comentario{
+.flex-comentario {
     display: flex;
     max-width: 33em;
     font-size: 0.8em;
-    padding-left: 18px ;
+    padding-left: 18px;
     /* background-color: blue; */
 }
 
@@ -261,11 +269,11 @@ label,
     font-weight: bold;
 }
 
-.overflow-wrap{
-    overflow-wrap: break-word;
+.espacamentoo {
+    padding-left: 7px;
 }
 
-.rodape-comentarios{
+.rodape-comentarios {
     font-size: 1em;
     height: 2em;
     display: flex;

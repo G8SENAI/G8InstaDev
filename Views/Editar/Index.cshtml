@@ -45,7 +45,10 @@
         </div>
         <div class="userfoto">
             <img src="../img/Editar/@ViewBag.Usuario.Foto" alt="foto do perfil" class="foto">
-        <input type="file" class="quadrado3" name="Foto" placeholder="Digite o seu novo nome de usuário">
+        <input type="file" class="charger" name="Foto" placeholder="Escolha sua foto">
+        <div class="nomeUsuario">
+           <p></p> @ViewBag.Usuario.NomeDoUsuario </p>
+        </div>
         </div>
 
         <div class="nomeuser">
@@ -63,7 +66,7 @@
             <p2>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p2>
         </div>
         <div class="descricao2">
-            <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por mais 14 dias.
+            <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para @ViewBag.Usuario.NomeDoUsuario por mais 14 dias.
             </p>
             <p2>Informações pessoais Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um
                 animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p2>
@@ -78,7 +81,7 @@
         <div class="box">
 
         </div>
-            <button class="btnpostar" type="submit" asp-controller="Editar" asp-action="Cadastrar" >  Enviar </button>
+            <button class="box" type="submit" asp-controller="Editar" asp-action="Cadastrar" >  Enviar </button>
 
         <div class="desativar">
             <p>Desative minha conta definitivamente</p>
