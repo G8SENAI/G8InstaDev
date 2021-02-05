@@ -19,8 +19,10 @@ namespace G8InstaDev.Controllers
         [Route("Listar")]
          public IActionResult Index()
          {
-             ViewBag.NomeUsuario = HttpContext.Session.GetString("_UserName");
-             ViewBag.NomeCompleto = HttpContext.Session.GetString("_NomeCompleto");
+            Usuario usuario = new Usuario();
+            
+            ViewBag.usuario = usuario.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
+
              ViewBag.Feeds = feedModel.ReadAll();
              return View();
          }

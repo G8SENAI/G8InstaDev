@@ -24,6 +24,7 @@ namespace G8InstaDev.Controllers
         Publicacao feedModel = new Publicacao();
         public IActionResult Index()
         {
+            
             ViewBag.Feeds = feedModel.ReadAll();
             return View();
         }
