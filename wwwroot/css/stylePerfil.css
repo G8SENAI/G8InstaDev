@@ -76,12 +76,18 @@ select:focus {
 
 .logos {
     justify-content: space-between;
-
+    margin-top: 0.5em;
 }
 
 .logoss {
     padding-left: 25px;
     padding-top: 3px;
+}
+
+.imagem-de-perfil-header{
+    margin-left: 1em;
+    max-width: 2.5em;
+    border-radius: 100%;
 }
 
 .perfil {
@@ -203,6 +209,10 @@ select:focus {
 .info-publicacao img{
     width: 4em;
     height: 4em;
+}
+
+.imagem-perfil-publicacao{
+    border-radius: 100%;
 }
 
 .local{
