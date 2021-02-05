@@ -13,46 +13,49 @@ namespace G8InstaDev_master.Controllers
 
 
         [Route("Listar")]
-        public IActionResult Index(){
-            
+        public IActionResult Index()
+        {
+
             ViewBag.Usuario = editar.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
 
-            ViewBag.Editar = editar.ReadAll(); 
+            ViewBag.Editar = editar.ReadAll();
             return View();
-            
+
         }
 
         [Route("Cadastrar")]
         public IActionResult Editar(IFormCollection form)
         {
             Usuario usuarioNovo = new Usuario();
-            
-            if(form.Files.Count > 0)
-            {
-                var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Editar");
 
-                if (!Directory.Exists(folder))
-                {
-                    Directory.CreateDirectory(folder);
-                }
-
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    // Salvamos o arquivo no caminho especificado
-                    file.CopyTo(stream);
-                }
-
-                
-                usuarioNovo.Foto = file.FileName;
-
-            }
-            else
+            if (form != null)
             {
 
-                usuarioNovo.Foto = "padrao.png";
+
+                if (form.Files.Count > 0)
+                {
+                    var file = form.Files[0];
+
+
+                    var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Editar");
+
+                    if (!Directory.Exists(folder))
+                    {
+                        Directory.CreateDirectory(folder);
+                    }
+
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Editar/", folder, file.FileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        // Salvamos o arquivo no caminho especificado
+                        file.CopyTo(stream);
+                    }
+
+                    usuarioNovo.Foto = file.FileName;
+
+
+                }
             }
 
             usuarioNovo.IdUsuario = int.Parse(HttpContext.Session.GetString("_IdLogado"));
@@ -66,7 +69,8 @@ namespace G8InstaDev_master.Controllers
         }
 
         [Route("{id}")]
-        public IActionResult Excluir(int id){
+        public IActionResult Excluir(int id)
+        {
             editar.Delete(id);
             ViewBag.Editar = editar.ReadAll();
             return LocalRedirect("~/Editar/Listar");
@@ -75,8 +79,8 @@ namespace G8InstaDev_master.Controllers
         {
             editar.Update(u);
             return LocalRedirect("~/Editar/Listar");
-        } 
-        
+        }
 
-    }   
+
+    }
 }

@@ -95,6 +95,11 @@ select:focus {
     margin: 0 4.5em;
 }
 
+.imagem-de-perfil {
+    max-width: 11em;
+    border-radius: 100%;
+}
+
 .info{
     width: 25em;
     height: 10em;
