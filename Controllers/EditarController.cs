@@ -80,11 +80,13 @@ namespace G8InstaDev_master.Controllers
         [Route("{id}")]
         public IActionResult Excluir([FromQuery]int id)
         {
+            Publicacao publicacao = new Publicacao();
             var userId = -1;
             if(id == 0){
                 userId = int.Parse(HttpContext.Session.GetString("_IdLogado"));
             }
             editar.Delete(userId);
+            publicacao.DeletarTodasPublicacoesUsuario(userId);
             ViewBag.Editar = editar.ReadAll();
 
             HttpContext.Session.Remove("_IdLogado");
