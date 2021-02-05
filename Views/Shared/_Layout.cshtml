@@ -88,7 +88,7 @@
                 <div class=" content flex-bt-center">
                     <div class="menu">
                         <div class="logo">
-                            <img src="../imgs/Instadev.png">
+                            <a asp-controller="Feed" asp-action="Listar"><img src="../imgs/Instadev.png"></a>
                         </div>
 
                         <div id="divBusca">
@@ -100,6 +100,7 @@
                             <img src="../imgs/plane 1.png" alt="Plano" class="logoss">
                             <img src="../imgs/compass 1.png" alt="Compasso" class="logoss">
                             <img src="../imgs/coraçao.png" alt="Curtidas" class="logoss">
+                            <a asp-controller="Perfil"><img src="/img/Editar/@ViewBag.usuario.Foto" alt="" class="imagem-de-perfil-header"></a>
                         </div>
                     </div>
                 </div>
