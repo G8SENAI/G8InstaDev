@@ -20,6 +20,9 @@ namespace G8InstaDev.Controllers
                 userId = idUsuario;
 
             Publicacao publicacao = new Publicacao();
+
+            ViewBag.logado = int.Parse(HttpContext.Session.GetString("_IdLogado")); 
+
             ViewBag.publicacao = publicacao.AcharPostsDoUsuario(userId);
 
             ViewBag.perfil = usuario.BuscarUsuarioPorId(userId); 

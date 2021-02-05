@@ -96,6 +96,12 @@ select:focus {
     border: 1px solid #F1F1F1;
     box-sizing: border-box;
 }
+
+.foto{
+    max-width: 10em;
+    border-radius: 100%;
+}
+
 .borda{
     position: absolute;
 width: 608px;
