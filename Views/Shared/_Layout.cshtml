@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - G8InstaDev</title>
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -29,6 +31,14 @@
                         <div id="divBusca">
                             <a href="../Perfil/Index.html"><img src="../imgs/Vector.png" alt="Pesquisar" /></a>
                             <input type="text" id="txtBusca" placeholder="Pesquisar" />
+                            <!-- Pesquisar AutoComplete -->
+                            <script>
+                                $("#txtBusca").autocomplete({
+                                    source: "https://localhost:5001/PublicacaoAPI/ListarUsuario"
+                                });
+                            </script>
+                            <!-- Pesquisar AutoComplete -->
+
                         </div>
                         <div class="logos">
                             <img src="../imgs/home.png" alt="home" class="logoss">
@@ -51,9 +61,16 @@
                             <img src="../imgs/Instadev.png">
                         </div>
 
-                        <div id="divBusca">
+                        <div id="divBusca" class="ui-widget">
                             <a href="../Perfil/Index.html"><img src="../imgs/Vector.png" alt="Pesquisar" /></a>
                             <input type="text" id="txtBusca" placeholder="Pesquisar" />
+                            <!-- Pesquisar AutoComplete -->
+                            <script>
+                                $("#txtBusca").autocomplete({
+                                    source: "https://localhost:5001/PublicacaoAPI/ListarUsuario"
+                                });
+                            </script>
+                            <!-- Pesquisar AutoComplete -->
                         </div>
                         <div class="logos">
                             <img src="../imgs/home.png" alt="home" class="logoss">

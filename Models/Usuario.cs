@@ -5,7 +5,7 @@ using System;
 
 namespace G8InstaDev.Models
 {
-    public class Usuario : InstaDevBase , IUsuario
+    public class Usuario : InstaDevBase, IUsuario
     {
         public int IdUsuario { get; set; }
         public string Email { get; set; }
@@ -14,7 +14,7 @@ namespace G8InstaDev.Models
         public string Senha { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Foto { get; set; }
-        
+
         private const string PATH = "Database/Usuario.csv";
 
         // Usuario usuario = new Usuario();
@@ -29,24 +29,24 @@ namespace G8InstaDev.Models
             return $"{u.IdUsuario};{u.Email};{u.NomeCompleto};{u.NomeDoUsuario};{u.Senha};{u.DataNascimento};{u.Foto}";
         }
 
-         public int idCadastro()
+        public int idCadastro()
         {
             var cadastro = ReadAll();
 
-            if(cadastro.Count == 0)
+            if (cadastro.Count == 0)
             {
                 return 1;
             }
 
-            var codigo = cadastro[ cadastro.Count - 1].IdUsuario;
+            var codigo = cadastro[cadastro.Count - 1].IdUsuario;
 
-            codigo ++;
+            codigo++;
 
             return codigo;
         }
         public void Create(Usuario u)
         {
-            string[] linhas = {Prepare(u)};
+            string[] linhas = { Prepare(u) };
             File.AppendAllLines(PATH, linhas);
         }
 
@@ -56,8 +56,8 @@ namespace G8InstaDev.Models
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
-            { 
-                string[]linha = item.Split(";");
+            {
+                string[] linha = item.Split(";");
 
                 Usuario usuario = new Usuario();
                 usuario.IdUsuario = int.Parse(linha[0]);
@@ -66,7 +66,15 @@ namespace G8InstaDev.Models
                 usuario.NomeDoUsuario = linha[3];
                 usuario.Senha = linha[4];
                 usuario.DataNascimento = DateTime.Parse(linha[5]);
-                usuario.Foto = linha[6];
+
+                if (linha[6] == "")
+                {
+                    usuario.Foto = "padrao.png";
+                }
+                else
+                {
+                    usuario.Foto = linha[6];
+                }
 
                 cadastros.Add(usuario);
 
@@ -95,8 +103,14 @@ namespace G8InstaDev.Models
             usuarioBuscado.NomeDoUsuario = usuarioLinha[3];
             usuarioBuscado.Senha = usuarioLinha[4];
             usuarioBuscado.DataNascimento = DateTime.Parse(usuarioLinha[5]);
-            usuarioBuscado.Foto = usuarioLinha[6];
-
+            if (usuarioLinha[6] == "")
+            {
+                usuarioBuscado.Foto = "padrao.png";
+            }
+            else
+            {
+                usuarioBuscado.Foto = usuarioLinha[6];
+            }
             return usuarioBuscado;
         }
 
@@ -105,7 +119,7 @@ namespace G8InstaDev.Models
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
             linhas.Add(Prepare(u));
-            RewriteCSV(PATH, linhas);   
+            RewriteCSV(PATH, linhas);
         }
 
         public void Delete(int id)
