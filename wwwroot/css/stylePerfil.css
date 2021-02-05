@@ -107,7 +107,7 @@ select:focus {
 }
 
 .info{
-    width: 25em;
+    width: 30em;
     height: 10em;
     display: flex;
     flex-direction: column;

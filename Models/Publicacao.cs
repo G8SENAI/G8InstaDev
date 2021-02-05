@@ -62,6 +62,12 @@ namespace G8InstaDev.Models
             RewriteCSV(PATH, linhas);
         }
 
+        public void DeletarTodasPublicacoesUsuario(int id){
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll(x => x.Split(";")[3] == id.ToString());
+            RewriteCSV(PATH, linhas);
+        }
+
         public List<Publicacao> ReadAll()
         {
             List<Publicacao> feeds = new List<Publicacao>();
