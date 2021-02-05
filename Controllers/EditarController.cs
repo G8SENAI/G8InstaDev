@@ -3,6 +3,7 @@ using G8InstaDev.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using System.Collections.Generic;
+using System;
 
 namespace G8InstaDev_master.Controllers
 {
@@ -13,31 +14,41 @@ namespace G8InstaDev_master.Controllers
 
 
         [Route("Listar")]
-        public IActionResult Index(){
-            
+        public IActionResult Index()
+        {
+
             ViewBag.Usuario = editar.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
 
-            ViewBag.Editar = editar.ReadAll(); 
+            ViewBag.Editar = editar.ReadAll();
             return View();
-            
+
         }
 
         [Route("Cadastrar")]
         public IActionResult Editar(IFormCollection form)
         {
             Usuario usuarioNovo = new Usuario();
-            
-            if(form.Files.Count > 0)
+            Usuario usuarioBuscado = new Usuario();
+
+
+
+            if (form.Files.Count > 0)
             {
                 var file = form.Files[0];
+
+
                 var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Editar");
 
                 if (!Directory.Exists(folder))
                 {
                     Directory.CreateDirectory(folder);
                 }
+                
+                var nomeFoto = Guid.NewGuid();
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                // nomeFoto.ToString() + ".png";
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Editar/", folder, nomeFoto.ToString() + ".png");
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
@@ -45,15 +56,16 @@ namespace G8InstaDev_master.Controllers
                     file.CopyTo(stream);
                 }
 
-                
-                usuarioNovo.Foto = file.FileName;
+                usuarioNovo.Foto = nomeFoto.ToString() + ".png";
+
 
             }
             else
             {
-
-                usuarioNovo.Foto = "padrao.png";
+                Usuario logado = usuarioBuscado.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
+                usuarioNovo.Foto = logado.Foto;
             }
+
 
             usuarioNovo.IdUsuario = int.Parse(HttpContext.Session.GetString("_IdLogado"));
             usuarioNovo.Email = form["Email"];
@@ -66,7 +78,8 @@ namespace G8InstaDev_master.Controllers
         }
 
         [Route("{id}")]
-        public IActionResult Excluir(int id){
+        public IActionResult Excluir(int id)
+        {
             editar.Delete(id);
             ViewBag.Editar = editar.ReadAll();
             return LocalRedirect("~/Editar/Listar");
@@ -75,8 +88,8 @@ namespace G8InstaDev_master.Controllers
         {
             editar.Update(u);
             return LocalRedirect("~/Editar/Listar");
-        } 
-        
+        }
 
-    }   
+
+    }
 }

@@ -98,6 +98,16 @@ select:focus {
     padding-left: 30px;
 }
 
+.imagem-de-perfil{
+    max-width: 8em;
+    border-radius: 100%;
+}
+
+.imagem-de-perfil-post{
+    max-width: 4em;
+    border-radius: 100%;
+}
+
 .fotoUSUARIO {
     float: right;
     position: absolute;

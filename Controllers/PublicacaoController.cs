@@ -19,8 +19,10 @@ namespace G8InstaDev.Controllers
         [Route("Listar")]
          public IActionResult Index()
          {
-             ViewBag.NomeUsuario = HttpContext.Session.GetString("_UserName");
-             ViewBag.NomeCompleto = HttpContext.Session.GetString("_NomeCompleto");
+            Usuario usuario = new Usuario();
+            
+            ViewBag.usuario = usuario.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
+
              ViewBag.Feeds = feedModel.ReadAll();
              return View();
          }
@@ -41,7 +43,9 @@ namespace G8InstaDev.Controllers
                     Directory.CreateDirectory(folder);
                 }
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                var nomeFoto = Guid.NewGuid();
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, nomeFoto.ToString() + ".png");
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
@@ -49,7 +53,7 @@ namespace G8InstaDev.Controllers
                     file.CopyTo(stream);
                 }
 
-                novoFeed.Imagem = file.FileName;
+                novoFeed.Imagem = nomeFoto.ToString() + ".png";
 
             }
             else
