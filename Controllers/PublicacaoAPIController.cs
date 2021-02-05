@@ -40,5 +40,19 @@ namespace G8InstaDev.Controllers
             publicacao.Delete(id);
             return true;
         }
+        [HttpGet("PublicacaoAPI/ListarUsuario")]
+        public List<string> ListarUsuario()
+        {
+            Usuario usuario = new Usuario();
+            List<Usuario> usuariolst = usuario.ReadAll();
+            List<string> retornolst = new List<string>();
+            foreach (Usuario usuarioItem in usuariolst)
+            {
+                retornolst.Add(usuarioItem.NomeCompleto);
+                
+            }
+            return retornolst;
+        }
+
     }
 }

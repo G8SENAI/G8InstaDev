@@ -2,32 +2,40 @@
 <html>
 
 <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <link rel="stylesheet" href="../css/estilos.css" />
     <title>InstaDev</title>
 </head>
 
 <body>
-    @* <header class="topo">
+    <header class="topo">
         <div class=" content flex-bt-center">
-        <div class="menu">
-        <div class="logo">
-        <a href=""><img src="../wwwroot/EdicaoDePerfil/img/Instadev.png"></a>
-        </div>
+            <div class="menu">
+                <div class="logo">
+                    <a href=""><img src="../wwwroot/EdicaoDePerfil/img/Instadev.png"></a>
+                </div>
 
-        <div id="pesquisa">
-        <img src="../wwwroot/EdicaoDePerfil/img/Vector.png" alt="Pesquisar" />
-        <input type="text" id="search" placeholder="Pesquisar" />
+
+
+
+
+                <div id="pesquisa">
+                    <img src="../wwwroot/EdicaoDePerfil/img/Vector.png" alt="Pesquisar" />
+                    <input type="text" id="search" placeholder="Pesquisar" />
+
+                </div>
+                <div class="logos">
+                    <a href=""><img src="../EdicaoDePerfil/img/house.png" alt="house" class="log"></a>
+                    <a href=""><img src="../EdicaoDePerfil/img/plane 1.png" alt="plane" class="log"></a>
+                    <a href=""><img src="../EdicaoDePerfil/img/compass 1.png" alt="compass" class="log"></a>
+                    <a href=""><img src="../EdicaoDePerfil/img/love.png" alt="love" class="log"></a>
+                    <a href=""><img src="../EdicaoDePerfil/img/thank-you 1.png" alt="foto" class="log"></a>
+                </div>
+            </div>
         </div>
-        <div class="logos">
-        <a href=""><img src="../EdicaoDePerfil/img/house.png" alt="house" class="log"></a>
-        <a href=""><img src="../EdicaoDePerfil/img/plane 1.png" alt="plane" class="log"></a>
-        <a href=""><img src="../EdicaoDePerfil/img/compass 1.png" alt="compass" class="log"></a>
-        <a href=""><img src="../EdicaoDePerfil/img/love.png" alt="love" class="log"></a>
-        <a href=""><img src="../EdicaoDePerfil/img/thank-you 1.png" alt="foto" class="log"></a>
-        </div>
-        </div>
-        </div>
-        </header> *@
+    </header>
     <div id="quadrado">
         <div class="borda">
             <div class="b2">
@@ -37,7 +45,7 @@
     </div>
     </div>
 
-             <form method="POST" class="post" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+    <form method="POST" class="post" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
         <div class="info">
             <div class="aba">
                 <p>Editar Perfil</p>
@@ -45,28 +53,41 @@
         </div>
         <div class="userfoto">
             <img src="../img/Editar/@ViewBag.Usuario.Foto" alt="foto do perfil" class="foto">
+<<<<<<< HEAD
         <input type="file" class="charger" name="Foto" placeholder="Escolha sua foto">
         <div class="nomeUsuario">
            <p></p> @ViewBag.Usuario.NomeDoUsuario </p>
         </div>
+=======
+            <input type="file" class="quadrado3" name="Foto" placeholder="Digite o seu novo nome de usuário">
+>>>>>>> cc269cea1a6365e233c59e799acc72765c513291
         </div>
 
         <div class="nomeuser">
             <p>Nome</p>
         </div>
-        <input type="text" class="quadrado2" name="NomeCompleto" value="@ViewBag.Usuario.NomeCompleto" placeholder="Digite o seu novo nome completo">
+        <input type="text" class="quadrado2" name="NomeCompleto" value="@ViewBag.Usuario.NomeCompleto"
+            placeholder="Digite o seu novo nome completo">
 
-        <input type="text" class="quadrado3" name="NomeUsuario" value="@ViewBag.Usuario.NomeDoUsuario"   placeholder="Digite o seu novo nome de usuário">
-        <input type="email" class="quadrado4" name="Email" value="@ViewBag.Usuario.Email" placeholder="Digite o seu novo Email">
+        <input type="text" class="quadrado3" name="NomeUsuario" value="@ViewBag.Usuario.NomeDoUsuario"
+            placeholder="Digite o seu novo nome de usuário">
+        <input type="email" class="quadrado4" name="Email" value="@ViewBag.Usuario.Email"
+            placeholder="Digite o seu novo Email">
         <input type="hidden" class="quadrado4" name="Senha" value="@ViewBag.Usuario.Senha">
 
         <div class="descricao">
-            <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido
+            <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo,
+                apelido
                 ou nome comercial.</p>
             <p2>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p2>
         </div>
         <div class="descricao2">
+<<<<<<< HEAD
             <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para @ViewBag.Usuario.NomeDoUsuario por mais 14 dias.
+=======
+            <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por mais 14
+                dias.
+>>>>>>> cc269cea1a6365e233c59e799acc72765c513291
             </p>
             <p2>Informações pessoais Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um
                 animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p2>
@@ -81,11 +102,21 @@
         <div class="box">
 
         </div>
+<<<<<<< HEAD
             <button class="box" type="submit" asp-controller="Editar" asp-action="Cadastrar" >  Enviar </button>
+=======
+        <button class="btnpostar" type="submit" asp-controller="Editar" asp-action="Cadastrar"> Enviar </button>
+>>>>>>> cc269cea1a6365e233c59e799acc72765c513291
 
         <div class="desativar">
             <p>Desative minha conta definitivamente</p>
         </div>
+
+        <script>
+            $("#search").autocomplete({
+                source: "https://localhost:5001/PublicacaoAPI/ListarUsuario"
+            });
+        </script>
     </form>
 </body>
 
