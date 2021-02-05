@@ -123,15 +123,18 @@ select:focus {
 }
 
 .sobe {
-    color: black;
+    color: rgba(182, 182, 182, 1);
     font-size: 16px;
+    bottom: 63px;
+    position: relative;
+    left: 25px;
 }
 
 .espacao {
     color: black;
     font-size: 16px;
     position: relative;
-    bottom: 117px;
+    bottom: 165px;
     left: 25px;
 }
 

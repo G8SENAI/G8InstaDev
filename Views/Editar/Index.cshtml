@@ -14,7 +14,7 @@
         <div class=" content flex-bt-center">
             <div class="menu">
                 <div class="logo">
-                    <a href=""><img src="../imgs/Instadev.png"></a>
+                 <a asp-controller="Feed"><a href=""><img src="../imgs/Instadev.png"></a></a>
                 </div>
                 <div id="pesquisa">
                     <img src="../imgs/Vector.png" alt="Pesquisar" />
@@ -32,7 +32,6 @@
                     <a href=""><img src="../imgs/plane 1.png" alt="plane" class="log"></a>
                     <a href=""><img src="../imgs/compass 1.png" alt="compass" class="log"></a>
                     <a href=""><img src="../imgs/coraçao.png" alt="coracao" class="log"></a>
-                    <a href=""><img src="../imgs/thank-you 1.png" alt="foto" class="log"></a>
                 </div>
             </div>
         </div>
@@ -56,9 +55,9 @@
             <img src="../img/Editar/@ViewBag.Usuario.Foto" alt="foto do perfil" class="foto">
         <input type="file" class="charger" name="Foto" placeholder="Escolha sua foto">
         <div class="nomeUsuario">
-           <p></p> @ViewBag.Usuario.NomeDoUsuario </p>
+           <p>@ViewBag.Usuario.NomeDoUsuario </p>
+            @* <input type="file" class="quadrado3" name="Foto" placeholder="Digite o seu novo nome de usuário"> *@
         </div>
-            <input type="file" class="quadrado3" name="Foto" placeholder="Digite o seu novo nome de usuário">
 
         </div>
 
@@ -97,7 +96,7 @@
         <div class="box">
 
         </div>
-        <button class="btnpostar" type="submit" asp-controller="Editar" asp-action="Cadastrar"> Enviar </button>
+        <button class="box" type="submit" asp-controller="Editar" asp-action="Cadastrar"> Enviar </button>
 
         <div class="desativar">
             <p>Desative minha conta definitivamente</p>
