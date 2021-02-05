@@ -81,17 +81,19 @@ namespace G8InstaDev.Models
 
 
 
-                List<String> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
-                var linhaBuscada =
-                csv.Find(
-                    x =>
-                    x.Split(";")[0] == linha[3]
-                );
+                // List<String> csv = usuarioModel.BuscarUsuarioPorId(publicacao.IdUsuario);
+                // var linhaBuscada =
+                // csv.Find(
+                //     x =>
+                //     x.Split(";")[0] == linha[3]
+                // );
 
-                var usuarioLinha = linhaBuscada.Split(";");
-                publicacao.FotoUsuario = usuarioLinha[6].ToString();
-                publicacao.NomeUsuario = usuarioLinha[3].ToString();
-                publicacao.NomeCompleto = usuarioLinha[2].ToString();
+                var usuarioBuscado = usuarioModel.BuscarUsuarioPorId(publicacao.IdUsuario);
+
+                // var usuarioLinha = linhaBuscada.Split(";");
+                publicacao.FotoUsuario = usuarioBuscado.Foto;
+                publicacao.NomeUsuario = usuarioBuscado.NomeDoUsuario;
+                publicacao.NomeCompleto = usuarioBuscado.NomeCompleto;
 
                 feeds.Add(publicacao);
             }
