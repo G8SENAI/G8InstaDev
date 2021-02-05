@@ -1,36 +1,75 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - G8InstaDev</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/CSS-Cadastro/style.css">   
 
 </head>
-<body>
-      <header class="topo">
-        <div class=" content flex-bt-center">
-            <div class="menu">
-                <div class="logo">
-                    <img src="../imgs/Instadev.png">
-                </div>
 
-                <div id="divBusca">
-                    <a href="../Perfil/Index.html"><img src="../imgs/Vector.png" alt="Pesquisar" /></a>
-                    <input type="text" id="txtBusca" placeholder="Pesquisar" />
+<body>
+    @switch (@ViewData["Title"])
+    {
+        case "Cadastro":
+            <link rel="stylesheet" href="~/css/cadastro.css">
+            break;
+        case "Login":
+            <link rel="stylesheet" href="~/css/login.css">
+            break;
+        case "Perfil":
+            <link rel="stylesheet" href="~/css/stylePerfil.css">
+            <header class="topo">
+                <div class=" content flex-bt-center">
+                    <div class="menu">
+                        <div class="logo">
+                            <img src="../imgs/Instadev.png">
+                        </div>
+
+                        <div id="divBusca">
+                            <a href="../Perfil/Index.html"><img src="../imgs/Vector.png" alt="Pesquisar" /></a>
+                            <input type="text" id="txtBusca" placeholder="Pesquisar" />
+                        </div>
+                        <div class="logos">
+                            <img src="../imgs/home.png" alt="home" class="logoss">
+                            <img src="../imgs/plane 1.png" alt="Plano" class="logoss">
+                            <img src="../imgs/compass 1.png" alt="Compasso" class="logoss">
+                            <img src="../imgs/coraçao.png" alt="Curtidas" class="logoss">
+                            <a asp-controller="Perfil" asp-action="Cadastrar" asp-route-idUsuario="0"><img src="../img/Editar/@ViewBag.Usuario.Foto"
+                                    alt="Foto do usuário" class="logoss"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="logos">
-                    <img src="../imgs/home.png" alt="home" class="logoss">
-                    <img src="../imgs/plane 1.png" alt="Plano" class="logoss">
-                    <img src="../imgs/compass 1.png" alt="Compasso" class="logoss">
-                    <img src="../imgs/coraçao.png" alt="Curtidas" class="logoss">
-                    <a asp-controller="Perfil" asp-action="" asp-route-idUsuario="0"><img src="../imgs/thank-you 1.png" alt="Foto do usuário" class="logoss"></a>
+            </header>
+            break;
+        case "Home Page":
+            <link rel="stylesheet" href="~/css/style.css">
+            <header class="topo">
+                <div class=" content flex-bt-center">
+                    <div class="menu">
+                        <div class="logo">
+                            <img src="../imgs/Instadev.png">
+                        </div>
+
+                        <div id="divBusca">
+                            <a href="../Perfil/Index.html"><img src="../imgs/Vector.png" alt="Pesquisar" /></a>
+                            <input type="text" id="txtBusca" placeholder="Pesquisar" />
+                        </div>
+                        <div class="logos">
+                            <img src="../imgs/home.png" alt="home" class="logoss">
+                            <img src="../imgs/plane 1.png" alt="Plano" class="logoss">
+                            <img src="../imgs/compass 1.png" alt="Compasso" class="logoss">
+                            <img src="../imgs/coraçao.png" alt="Curtidas" class="logoss">
+                            <a asp-controller="Perfil" asp-action="Cadastrar" asp-route-idUsuario="0"><img src="../img/Editar/@ViewBag.Usuario.Foto"
+                                    alt="Foto do usuário" class="logoss"></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
+            </header>
+            break;
+        default:
+            break;
+    }
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -41,4 +80,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
+
 </html>

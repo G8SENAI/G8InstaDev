@@ -21,8 +21,9 @@ namespace G8InstaDev.Controllers
 
             var logado = 
             csv.Find(
-                x =>
-                x.Split(";")[1] == form["Username_Email"] &&
+                x => 
+                (x.Split(";")[1] == form["Login"] ||
+                x.Split(";")[3] == form["Login"]) &&
                 x.Split(";")[4] == form["Senha"]
             );
 
