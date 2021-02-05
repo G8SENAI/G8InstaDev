@@ -56,7 +56,7 @@
             alt="foto de perfil do usuario logado " class="descida imagem-de-perfil"></a>
     <p class="sobe">@ViewBag.usuario.NomeDoUsuario</p>
     <br>
-    <p class="espacao">@ViewBag.usuario.NomeCompleto</p>
+    <p class="espacao"><b>@ViewBag.usuario.NomeCompleto</b></p>
 </div>
 
 <section class="postar flex-bt-center content">
@@ -84,7 +84,7 @@
     <section class="postAdicionado flex-bt-center content">
         <div class="card">
             <div class="perfil">
-             <img class="foto-perfil" src="~/img/Editar/@ViewBag.Usuario.Foto" alt="Foto de perfil do usuário" width="40px">
+             <img class="foto-perfil" src="~/img/Editar/@ViewBag.Usuario.Foto" alt="Foto de perfil do usuário" width="30px">
                 <a asp-area="Link para excluir uma publicacao" asp-controller="Publicacao" asp-action="Excluir"
                     asp-route-id="@feed.IdPublicacao"><img src="../imgs/lixo.png" alt="Lixeira" class="lixo"></a>
                 <img src="/img/Feed/@feed.Imagem" alt="Imagem do post @feed.Legenda" width="700">

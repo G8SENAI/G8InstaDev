@@ -84,15 +84,15 @@ select:focus {
     background-color: rgb(255, 255, 255);
     position: fixed;
     width: 935px;
-    height: 579px;
+    height: 535px;
     left: 226px;
-    top: 25px;
+    top: 66px;
     border: 1px solid #F1F1F1;
     box-sizing: border-box;
 }
 
 .foto {
-    max-width: 7em;
+    max-width: 6em;
     border-radius: 100%;
 }
 
@@ -117,17 +117,15 @@ select:focus {
 
 .info {
     position: absolute;
-    width: 925px;
-    height: 600px;
     left: 244px;
-    top: 34px;
+    top: 75px;
 }
 
 .userfoto {
     position: absolute;
     height: 50px;
     left: 665px;
-    top: 56px;
+    top: 92px;
 }
 
 .username {
@@ -150,7 +148,7 @@ select:focus {
 .charger {
     position: absolute;
     left: 129px;
-    top: 70px;
+    top: 60px;
     color: #2686CC;
 }
 
@@ -159,7 +157,7 @@ select:focus {
     width: 50px;
     height: 19px;
     left: 590px;
-    top: 175px;
+    top: 195px;
     color: #000000;
 }
 
@@ -168,7 +166,7 @@ select:focus {
     width: 354px;
     height: 30px;
     left: 650px;
-    top: 186px;
+    top: 205px;
     background: #FFFFFF;
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
@@ -180,7 +178,7 @@ select:focus {
     width: 215px;
     height: 17px;
     left: 860px;
-    top: 170px;
+    top: 225px;
     color: black;
 }
 
@@ -189,7 +187,7 @@ select:focus {
     width: 354px;
     height: 48px;
     left: 652px;
-    top: 211px;
+    top: 232px;
     font-family: Segoe UI;
     font-style: normal;
     font-weight: normal;
@@ -203,7 +201,7 @@ select:focus {
     width: 354px;
     height: 30px;
     left: 650px;
-    top: 322px;
+    top: 337px;
     background: #FFFFFF;
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
@@ -215,7 +213,7 @@ select:focus {
     width: 354px;
     height: 30px;
     left: 647px;
-    top: 501px;
+    top: 490px;
     background: #FFFFFF;
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
@@ -227,7 +225,7 @@ select:focus {
     width: 354px;
     height: 32px;
     left: 651px;
-    top: 353px;
+    top: 365px;
     font-family: Segoe UI;
     font-style: normal;
     font-weight: normal;
@@ -241,7 +239,7 @@ select:focus {
     width: 150px;
     height: 19px;
     left: 533px;
-    top: 315px;
+    top: 330px;
     font-size: 14px;
     color: #000000;
 }
@@ -251,7 +249,7 @@ select:focus {
     width: 118px;
     height: 19px;
     left: 594px;
-    top: 495px;
+    top: 485px;
     font-size: 14px;
     color: #000000;
 }
@@ -281,7 +279,7 @@ select:focus {
     width: 66px;
     height: 30px;
     left: 608px;
-    top: 573px;
+    top: 559px;
     background: #2686CC;
     border-radius: 2px;
 }
@@ -301,7 +299,7 @@ select:focus {
     width: 354px;
     height: 16px;
     left: 822px;
-    top: 570px;
+    top: 553px;
     font-size: 12px;
     line-height: 16px;
     color: #2686CC;

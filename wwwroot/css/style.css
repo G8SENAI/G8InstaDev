@@ -103,7 +103,7 @@ select:focus {
 }
 
 .imagem-de-perfil {
-    max-width: 5em;
+    max-width: 4em;
     border-radius: 100%;
     position: relative;
     right: 70px;
@@ -123,16 +123,19 @@ select:focus {
 }
 
 .sobe {
-    color: black;
+    color: rgba(182, 182, 182, 1);
     font-size: 16px;
+    bottom: 56px;
+    position: relative;
+    left: 7px;
 }
 
 .espacao {
     color: black;
     font-size: 16px;
     position: relative;
-    bottom: 117px;
-    left: 25px;
+    bottom: 154px;
+    left: 8px;
 }
 
 .retangulo {
