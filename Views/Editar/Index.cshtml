@@ -99,7 +99,7 @@
         <button class="box" type="submit" asp-controller="Editar" asp-action="Cadastrar"> Enviar </button>
 
         <div class="desativar">
-            <p>Desative minha conta definitivamente</p>
+            <a asp-controller="Editar" asp-action="Excluir" asp-route-id=0>Desative minha conta definitivamente</a>
         </div>
     </form>
 </body>
