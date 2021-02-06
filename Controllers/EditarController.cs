@@ -43,7 +43,7 @@ namespace G8InstaDev_master.Controllers
                 {
                     Directory.CreateDirectory(folder);
                 }
-                
+
                 var nomeFoto = Guid.NewGuid();
 
                 // nomeFoto.ToString() + ".png";
@@ -78,18 +78,25 @@ namespace G8InstaDev_master.Controllers
         }
 
         [Route("{id}")]
-        public IActionResult Excluir(int id)
+        public IActionResult Excluir([FromQuery]int id)
         {
-            editar.Delete(id);
+            Publicacao publicacao = new Publicacao();
+            var userId = -1;
+            if(id == 0){
+                userId = int.Parse(HttpContext.Session.GetString("_IdLogado"));
+            }
+            editar.Delete(userId);
+            publicacao.DeletarTodasPublicacoesUsuario(userId);
             ViewBag.Editar = editar.ReadAll();
-            return LocalRedirect("~/Editar/Listar");
-        }
-        public IActionResult Alterar(Usuario u)
-        {
-            editar.Update(u);
-            return LocalRedirect("~/Editar/Listar");
-        }
 
+            HttpContext.Session.Remove("_IdLogado");
+            HttpContext.Session.Remove("_UserName");
+            HttpContext.Session.Remove("_NomeCompleto");
+            HttpContext.Session.Remove("_Email");
+            HttpContext.Session.Remove("_Foto");
 
+            return LocalRedirect("~/");
+
+        }
     }
 }

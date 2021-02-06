@@ -32,6 +32,7 @@
                     <a href=""><img src="../imgs/plane 1.png" alt="plane" class="log"></a>
                     <a href=""><img src="../imgs/compass 1.png" alt="compass" class="log"></a>
                     <a href=""><img src="../imgs/coraçao.png" alt="coracao" class="log"></a>
+                    <a asp-controller="Perfil" asp-route-IdUsuario=0><img src="/img/Editar/@ViewBag.Usuario.Foto" alt="" class="imagem-de-perfil-header"></a>
                 </div>
             </div>
         </div>
@@ -99,7 +100,7 @@
         <button class="box" type="submit" asp-controller="Editar" asp-action="Cadastrar"> Enviar </button>
 
         <div class="desativar">
-            <p>Desative minha conta definitivamente</p>
+            <a asp-controller="Editar" asp-action="Excluir" asp-route-id=0>Desative minha conta definitivamente</a>
         </div>
     </form>
 </body>
