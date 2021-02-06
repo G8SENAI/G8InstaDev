@@ -185,5 +185,10 @@ hr {
 }
 
 .erro {
-    color: var(--blue_button);
+    position: relative;
+    width: 260px;
+    top: -18.9em;
+    font-family: 'Segoe UI', "sans-serif";
+    margin: auto;
+    color: var(--option-color);
 }
