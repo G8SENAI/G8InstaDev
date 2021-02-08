@@ -25,7 +25,9 @@ namespace G8InstaDev.Controllers
 
             ViewBag.publicacao = publicacao.AcharPostsDoUsuario(userId);
 
-            ViewBag.perfil = usuario.BuscarUsuarioPorId(userId); 
+            ViewBag.perfil = usuario.BuscarUsuarioPorId(userId);
+
+            ViewBag.userLogado = usuario.BuscarUsuarioPorId(int.Parse(HttpContext.Session.GetString("_IdLogado")));
 
             return View();
         }
