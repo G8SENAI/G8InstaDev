@@ -132,6 +132,7 @@ select:focus {
     color: rgba(182, 182, 182, 1);
     font-size: 16px;
     bottom: 56px;
+    margin-top: 1.5em;
     position: relative;
     left: 7px;
 }
